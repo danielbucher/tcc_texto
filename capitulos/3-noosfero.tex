@@ -1,0 +1,312 @@
+\chapter{Noosfero}
+
+
+\section{Software Livre}
+
+Software expressa uma solução abstrata dos problemas computacionais.
+%
+O software, em um sistema computacional, é o componente que contém o
+conhecimento relacionado aos problemas a que a computação se aplica.
+%
+Por isso, o software é algo de interesse geral, uma vez que vários aspectos
+relacionados a ele ultrapassam as questões técnicas, como por exemplo:
+\begin{itemize}
+\item O processo de desenvolvimento do software; 
+\item Os mecanismos econômicos (gerenciais, competitivos, sociais, cognitivos etc.)
+que regem esse desenvolvimento e seu uso;
+\item O relacionamento entre desenvolvedores, fornecedores e usuários do
+        software;
+\item Os aspectos éticos e legais relacionados ao software.
+\end{itemize}
+
+O que define e diferencia o software livre do que podemos denominar de
+software restrito passa pelo entendimento desses quatro pontos dentro do que é
+conhecido como o \emph{ecossistema do software livre}.
+%
+O princípio básico desse ecossistema é promover a liberdade do usuário,
+sem discriminar quem tem permissão para usar um software e seus limites de uso,
+baseado na colaboração e num processo de desenvolvimento aberto.
+%
+Software livre é aquele que permite aos usuários usá-lo, estudá-lo, modificá-lo e
+redistribui-lo, em geral, sem restrições para tal e prevenindo que não sejam
+impostas restrições aos futuros usuários.
+%
+
+Normalmente, esse software existe por meio de projetos de desenvolvimento
+que estão centradas em torno de algum código-fonte acessível ao público,
+geralmente em um repositório na Internet, onde desenvolvedores e usuários
+podem interagir.
+%
+O código é necessariamente licenciado sob termos legais formais que estão de
+acordo com as definições da \textit{Free Software Foundation}
+\footnote{\url{http://www.gnu.org/philosophy/free-sw.html}} ou da
+\textit{Open Source Initiative}
+\footnote{\url{http://www.opensource.org/docs/definition.html}}.
+
+%------------------------------------------------------------------------------%
+
+Uma vantagem oferecida pelo software livre em comparação ao software
+restrito vem do fato de que o código-fonte pode ser livremente compartilhado.
+%
+Esse compartilhamento pode simplificar o desenvolvimento de aplicações
+personalizadas, que não precisam ser programadas a partir do zero, mas
+podem basear-se em soluções já existentes.
+%
+Na medida em que o desenvolvimento de aplicações personalizadas é um dos focos do
+desenvolvimento de software em geral, essa vantagem tem impacto significativo na
+redução de custos e na diminuição na duplicação de esforços, tirando proveito da
+característica abstrata do software.
+
+Outra vantagem resultante do compartilhamento do código se refere
+à possível melhoria na qualidade \citep{CatedralBazzar}, em particular frente aos
+problemas inerentes à sua complexidade, que é o que estamos interessados
+nesta tese.
+%
+Isso se deve ao maior número de desenvolvedores e usuários envolvidos
+com o software. Em outras palavras, um número maior de desenvolvedores, com diferentes
+perspectivas e necessidades, é capaz de identificar melhorias e corrigir
+mais \emph{bugs} em menos tempo e, consequentemente, promover refatorações que,
+geralmente, levam à melhoria do código.
+
+%
+Além disso, um número maior de usuários gera situações de uso e
+necessidades mais variadas, o que se traduz em um maior número
+de \emph{bugs} identificados e mais sugestões de melhorias.
+
+%------------------------------------------------------------------------------%
+
+\section{Desenvolvimento de Software Livre}
+
+O desenvolvimento de software livre possui características distintas do
+modelo restrito. Portanto, a relação com o mercado, o processo de
+desenvolvimento e o produto a ser oferecido devem ser abordados de maneiras
+distintas.
+
+No artigo \emph{A Catedral e o Bazar} \citep{CatedralBazzar}, Eric Raymond
+levanta os aspectos que contribuem para que um projeto de software
+livre tenha sucesso. Suas observações formaram a base do movimento pelo
+código aberto por ele iniciado na virada do século.
+% 
+Ao observar o modelo de desenvolvimento do Linux, Raymond vislumbrou semelhanças
+com um barulhento Bazar, onde centenas ou milhares de desenvolvedores davam a
+sua contribuição que era, então, gerenciada por um pequeno grupo ou por
+um ``ditador benevolente'' que dava orientações sobre a qualidade das
+modificações propostas e as aceitava ou não.
+%
+Ao identificar essas características, Raymond aplicou essas práticas de
+desenvolvimento do modelo Bazar de forma consciente em um projeto sob sua
+coordenação, o Fetchmail. Ele elencou as principais características desse modelo,
+típicas em boa parte dos projetos de software livre da atualidade, como sendo:
+
+\begin{itemize}
+
+%1
+\item \emph{Bons programas nascem de necessidades pessoais.} Um projeto tem maiores chances de sucesso
+    quando o desenvolvedor principal ou grupo de desenvolvedores principais tem interesse e sentem
+    a necessidade pessoal de utilizar aquele software.
+
+%2
+\item \emph{Bons programadores sabem escrever bom código, mas excelentes
+    programadores sabem reescrever e reutilizar código.} Raymond menciona a ``preguiça construtiva''
+    como a ideia de que não se deve reinventar a roda, mas sim reaproveitar o que já existe e,
+    se for o caso, modificar o que já existe para melhorá-lo.
+
+%3
+\item \emph{Esteja preparado para jogar fora código-fonte se necessário e começar de novo.} 
+	Ou seja, dificilmente acerta-se na primeira vez.
+
+%4	
+\item \emph{Os usuários devem ser tratados como co-desenvolvedores.} Esse é o melhor caminho para 
+    o aprimoramento do código e depuração eficaz.
+
+%5  
+\item \emph{Libere código cedo e libere frequentemente e ouça seus usuários.}
+	Um erro comum de pessoas e grupos que se 
+	iniciam no mundo do software livre é achar que seu software ainda não está pronto para ser
+	liberado, que agora ainda não é o momento certo para se fazer isso. Segundo Raymond, o quanto
+	antes o código for liberado e quanto maior a frequência de liberação de novas versões, melhor
+	será o retorno obtido dos usuários e a possibilidade de angariar contribuidores para o projeto.
+
+%6	
+\item \emph{Dados olhos suficientes, todos erros são triviais.} Raymond chamou essa frase de Lei de Linus.
+    Com milhares de pessoas lendo o código-fonte do Linux, os eventuais erros eram localizados e
+    reportados muito rapidamente. Da mesma forma, com centenas de pessoas com conhecimento técnico
+    para resolver aqueles erros, rapidamente aparecia um voluntário com a solução do problema.
+
+%7
+\item \emph{Trate seus testadores das versões Beta como um recurso valioso e eles logo se tornarão
+	um recurso valioso.} Não há nada mais eficaz para encontrar problemas num programa e sugerir
+	melhorias em suas funcionalidades do que um grupo de usuários ativos e motivados querendo utilizar
+	esse programa e testar as novas funcionalidades o quanto antes.
+
+%8	
+\item \emph{A perfeição (em projetar) é alcançada não quando não há mais nada a adicionar, 
+	mas quando não há nada para jogar fora.} Essa é uma ideia quase que de consenso entre os grandes
+	cientistas e engenheiros. Deve-se buscar sempre as soluções mais simples.
+
+%9
+\item \emph{A melhor coisa depois de ter boas ideias é reconhecer as boas ideias de seus contribuidores.} 
+    Um bom líder de um projeto de software livre não é necessariamente
+    aquele que tem ótimas ideias, mas sim aquele que é capaz de criar o ecossistema de 
+    colaboração que permita que as boas ideias emerjam e sejam valorizadas e adotadas.
+
+\end{itemize}
+
+Baseado nessas nove características, queremos atribuir a Eric Raymond, e 
+discutir nesta tese, uma extensão do que ele chamou de Lei Linus:
+\textit{Dados olhos e desenvolvedores suficientes, todos os bugs serão triviais e 
+o código estará organizado para receber contribuições} -- que vamos chamar aqui
+de ``Lei de Raymond''.
+
+%------------------------------------------------------------------------------%
+
+\section{Software livre como método de desenvolvimento de software}
+
+Devido às atividades de produção de código, documentação, relatos de \textit{bugs}
+entre outras, as comunidades de software livre vêm construindo coletivamente
+sistemas de software reconhecidamente de qualidade, em
+um ambiente de colaboração constante para atualização e evolução desses
+sistemas, organizados na forma de um rossio~\citep{simon:08}.
+% TODO: EXPLICAR Rossio...
+Nesse contexto, os usuários não necessariamente restringem-se a ser apenas
+agentes passivos, mas podem atuar como colaboradores ou produtores do software
+que usam.
+
+Esse fenômeno de produção coletiva extrapolou o movimento do software
+livre, especialmente a partir da primeira década do Século 21, com o surgimento de 
+serviços criados e mantidos pelos próprios usuários na Internet, como a
+Wikipedia, blogs pessoais, canais de TV e rádios online~\citep{wikinomics}.
+%
+Tais serviços, somados às redes
+sociais, fazem com que as pessoas realmente
+acreditem que podem influenciar outras através de seus próprios meios de
+comunicação~\citep{castells:06}.
+%
+Esse cenário, em que não fica clara uma diferenciação entre consumidor e produtor de
+informação e, no caso do software, usuário e desenvolvedor, pode ser chamado de
+\emph{cultura livre}.
+
+No caso do software livre, essa cultura tipicamente se pauta nas
+questões técnicas e se organiza como uma meritocracia, onde
+valoriza-se fortemente as colaborações feitas para o projeto.
+%
+No entanto, as questões éticas, quando se apresentam, em geral são consideradas
+tão importantes quanto as técnicas, já que o envolvimento com um projeto é
+também determinado pelo interesse pessoal.
+%
+Pessoas e organizações que permanecem no longo prazo colaborando de alguma maneira com o
+desenvolvimento de um software livre realmente acreditam que estão fazendo a 
+diferença e ajudando o mundo de alguma forma, e essa motivação
+faz com que sua dedicação seja diferenciada.
+%
+Mesmo no caso (cada vez mais comum) de desenvolvedores pagos para trabalhar em um projeto
+livre, os aspectos éticos e o relacionamento com a comunidade
+norteiam sua participação.
+
+\begin{comment}
+%TODO: Carlos Denner:
+Acho que voce deveria incluir exemplos ilustrativos para todos os pontos que argumenta (e.g., "Pessoas e organizações que permanecem no longo prazo colaborando de alguma maneira com o desenvolvimento de um software livre realmente acreditam que estão fazendo a diferença e ajudando
+o mundo de alguma forma"; "colaboram com um software livre para melhor reaproveitar o conhecimento produzido coletivamente, bem como atingir numa escala maior seu mercado consumidor"; "muitos projetos de software livre não vão além dos estágios iniciais de planejamento"; etc. etc.).
+\end{comment}
+
+Na prática, o desenvolvimento de software livre envolve administrar ou participar
+de uma equipe de desenvolvimento onde não há necessariamente uma hierarquia formal,
+mecanismos de pressão para o cumprimento de prazos e/ou grande formalismo em processos.
+%
+Uma das estratégias para atrair contribuidores e evitar que eles abandonem o
+projeto é garantir a qualidade do código,
+o que favorece a criação de um círculo virtuoso em que o código promove o crescimento
+da comunidade e a comunidade ativa promove melhorias no código (esse é ponto central
+discutido no estudos apresentados no Capítulo 4 desta tese).
+
+Na busca por uma formalização sobre qual é a metodologia das comunidades de software
+livre, estudos mostram que métodos ágeis e software livre têm formas de trabalhos
+semelhantes. Por exemplo, o desenvolvimento de software livre é considerado um método ágil
+por Martin Fowler~\citep{Fowler00orig}.
+%
+Alguns autores afirmam que o desenvolvimento de software livre é um método
+ágil~\citep{Warsta2002} e apontam fortes semelhanças entre métodos ágeis e
+software livre~\citep{Warsta2003}.
+%
+Por exemplo, há um mapeamento entre as práticas comuns usadas pelas
+comunidades de software livre e equipes ágeis~\citep{corbucci:2011}.
+%
+Conceitualmente, os valores semelhantes são:
+
+\begin{itemize}
+
+\item {Indivíduos e interações são mais importantes que processos e ferramentas.}
+
+\item {Software em funcionamento é mais importante que documentação a\-bran\-gen\-te.}
+
+\item {Colaboração com o cliente (usuários) é mais importante que negociação de contratos.}
+
+\item {Responder às mudanças é mais importante que seguir um plano.}
+
+\end{itemize}
+
+Além disso, várias práticas disseminadas pelas metodologias ágeis são usadas no
+dia-a-dia dos desenvolvedores e equipes das comunidades
+de software livre~\citep{corbucci:2011}:
+(i) Código compartilhado (coletivo);
+(ii) Projeto simples;
+(iii) Repositório único de código;
+(iv) Integração contínua;
+(v) Código e teste;
+(vi) Desenvolvimento dirigido por testes, e
+(vii) Refatoração.
+
+Observar e entender esses aspectos nos projetos de software livre tornam-se
+relevantes à medida que muitos projetos de software livre não vão além dos
+estágios iniciais e muitos acabam sendo abandonados antes de produzir
+resultados razoáveis.
+%
+Isso sugere que, mesmo com o sucesso de alguns projetos de software livre,
+as comunidades, com ou sem a participação de empresas, podem avançar no
+acompanhamento do desenvolvimento dos projetos de software livre que participam.
+
+Para ilustrar esse cenário, podemos observar alguns dados extraídos do
+SourceForge.net, um dos mais populares repositórios de projetos de software livre.
+%
+Entre os seus 201.494 projetos cadastrados, 60.642
+lançaram mais de uma versão, 40.228 foram baixados mais de uma vez, 23.754 têm
+mais de um membro, e
+apenas 12.141 projetos satisfazem esses três
+critérios de seleção juntos. Isso sugere que não mais que 6\% dos
+projetos no SourceForge.net foram capazes de constituir uma comunidade de usuários
+e desenvolvedores que se beneficiem do estilo de desenvolvimento
+Bazar~\citep{CatedralBazzar}.
+
+De maneira geral, pode-se afirmar que há uma grande disposição para a criação de
+projetos de software livre, mesmo que muitas das iniciativas ``falhem''.
+%
+Olhar o processo de desenvolvimento de software livre do ponto de vista da 
+Engenharia de Software e as possíveis sinergias com os métodos ágeis podem
+contribuir para um melhor rendimento dessa disposição na criação e colaboração
+em torno de projetos de software livre.
+
+Na prática, dentro do processo de desenvolvimento de software livre, após lançar
+uma versão inicial e divulgar o projeto, os usuários interessados começam a
+usar o software livre em questão. 
+%
+Lembrando o que foi salientado por Eric Raymond sobre ``bons programas nascerem de
+necessidades pessoais'', esses usuários podem também ser desenvolvedores, que
+irão colaborar com o projeto a fim de atenderem às suas próprias necessidades.
+%
+Destacando a colaboração no código-fonte, essas melhorias são enviadas aos
+mantenedores do projeto como \emph{patches}, ou seja, arquivos que
+contém as modificações no código e que serão analisados pelos mantenedores que,
+caso concordem com a mudança e com a sua implementação em si, irão
+aplicá-las ao repositório oficial do projeto.
+
+Mesmo que em projetos maiores outros aspectos sejam levados em consideração ou
+sigam processos mais burocrático de colaboração, a essência da colaboração
+técnica está no envio e análise de trechos de código-fonte.
+%
+Neste contexto, nesta tese de doutorado, argumentamos e discutimos, através de
+estudos baseados em análises estatísticas, que o monitoramento de métricas de
+código-fonte, como sendo uma das atividades de acompanhamento (do mesmo conceito de
+``tracking'' dos métodos ágeis), pode ser um recurso  valioso de apoio
+ao gerenciamento da evolução dos projetos de software livre com o objetivo de
+atrair e facilitar a colaboração dos desenvolvedores.
+

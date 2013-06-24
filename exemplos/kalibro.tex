@@ -1,0 +1,237 @@
+\section{Kalibro Metrics}
+\label{sec:kalibro}
+
+O Kalibro Metrics é um serviço web livre, projetado para se conectar a qualquer
+ferramenta de coleta de métricas de código-fonte. Seu objetivo é
+fornecer uma avaliação de fácil entendimento da qualidade (``saúde'') do
+software analisado.
+%
+
+O Kalibro Metrics permite que um especialista em métricas (ou qualquer usuário)
+especifique conjuntos de intervalos de valores para cada métrica fornecida pela
+ferramenta base, além de possibilitar a criação de novas métricas.
+%
+Com essa abordagem, pretendemos difundir o uso de métricas de código-fonte, pois
+com um conjunto de intervalos (ou seja, os valores frequentes) e suas
+respectivas interpretações, qualquer desenvolvedor pode explorá-las e melhor
+entendê-las.
+
+Argumentamos que é desejável um software que colete métricas e associe seus
+resultados a alguma interpretação, tornando-as mais fáceis de entender.
+%
+Ao constatar dificuldades nas ferramentas de métricas, estabelecemos
+alguns requisitos para um software que vise a difundir o uso de métricas
+de código-fonte:
+
+\begin{enumerate}
+
+\item \textbf{Intervalos de aceitação:} Deve permitir o uso de múltiplos intervalos
+para fornecer diferentes interpretações sobre os valores das métricas.
+%
+Por exemplo, usando o Eclipse Metrics \citep{Metrics2005} é possível
+configurar valores mínimo e máximo (um intervalo de aceitação) para cada métrica
+que ele fornece, e associar uma dica de correção quando o resultado para um
+método, classe ou pacote está fora desse intervalo.
+%
+Os intervalos devem ser configuráveis, pois as métricas em geral não possuem
+valores de referência absolutos ou universalmente aceitos, como discutimos nesta
+tese.
+%
+Os valores ideais podem variar de acordo com vários fatores, como a linguagem e
+o domínio de aplicação.
+ 
+  \item \textbf{Extensível:} Não deve se limitar a apenas uma linguagem de
+programação, nem a um conjunto pré-definido de métricas.
+%
+Deve fornecer interface clara para adicionar suporte a novas linguagens de
+programação, pois isso pode atrair uma gama maior de usuários em potencial para
+sugerir intervalos de acordo com suas experiências em linguagens específicas.
+%
+Além disso, o usuário deve ser capaz de configurar o conjunto de métricas que
+deseja analisar.
+%
+Muitos coletores de métricas calculam e exibem o resultado de todas as métricas
+de seu repertório, o que consome  mais recursos que o necessário (i.e., tempo e
+memória) e polui a exibição.
+%
+Deve haver suporte para inclusão de novas métricas, a partir de diferentes
+coletores de métricas ou a partir das métricas existentes.
+%
+O índice de manutenibilidade \citep{VanDoren1997} é um exemplo de métrica criada
+como combinação de métricas básicas.
+%
+Outro exemplo é a complexidade estrutural, explicada na
+Seção~\ref{sec:metricas-selecionadas}, que é o produto de uma métrica de
+coesão com uma de acoplamento.
+
+\item \textbf{Comparação entre projetos:} A ferramenta deve dar suporte a
+comparação de características específicas do código-fonte de vários projetos
+através de métricas, dando suporte aos pesquisadores e ajudando nas decisões de
+adoção de um determinado software.
+
+\item \textbf{Software livre mantido ativamente:} A ferramenta deve ser
+software livre, disponível sem restrições e mantida ativamente.
+%
+Assim, qualquer um pode contribuir com seu desenvolvimento e modificá-la de
+acordo com suas necessidades.
+%
+Isso também permite que pesquisadores repliquem completamente estudos e
+resultados -- algo que está na concepção das publicações científicas: serem
+reprodutíveis.
+
+\end{enumerate}
+
+\begin{table}[hbt]
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+  \hline
+  Ferramenta                 & Linguagens          & \textbf{Intervalos} & \textbf{Extensível} & \textbf{Comparação} & \textbf{Livre} \\
+  \hline\hline
+
+  \textbf{Analizo}           & C, C++, Java        & Não                 & Sim             & Não             & Sim \\
+  \hline
+
+  \textbf{Analyst4j}         & Java                & Sim                 & Não             & Não             & Não \\
+  \hline
+
+  \textbf{CCCC}              & C++, Java           & Não                 & Não             & Não             & Sim \\
+  \hline
+
+  \textbf{Checkstyle}        & Java                & Sim                 & Não             & Não             & Sim \\
+  \hline
+
+  \textbf{CK Java Metrics}   & Java                & Não                 & Não             & Não             & Sim \\
+  \hline
+
+  \textbf{CMetrics}          & C                   & Não                 & Sim             & Não             & Sim \\
+  \hline
+
+  \textbf{Cscope}            & C                   & Não                 & Não             & Não             & Sim \\
+  \hline
+
+  \textbf{CVSAnaly}            & C, C++, Python      & Não                 & Sim             & Não             & Sim \\
+  \hline
+
+  \textbf{Dependency Finder} & Java                & Não                 & Não             & Não             & Sim \\
+  \hline
+
+  \textbf{Infusion}          & C, C++, Java        & Sim                 & Não             & Sim             & Não \\
+  \hline
+
+
+  \textbf{JaBUTi}            & Java                & Não                 & Não             & Não             & Sim \\
+  \hline
+
+  \textbf{MacXim}            & Java                & Não                 & Não             & Não             & Sim \\
+  \hline
+
+  \textbf{Metrics}           & Java                & Sim                 & Não             & Não             & Sim \\
+  \hline
+
+  \textbf{OOMeter}           & Java,C\#            & Não                 & Não             & Não             & Não \\
+  \hline
+
+\textbf{Understand for Java} & Java                & Não                 & Não             & Não             & Não \\
+  \hline
+
+\textbf{VizzAnalyzer}        & Java                & Não                 & Não             & Não             & Não \\
+  \hline
+
+\end{tabular}
+\caption{Ferramentas existentes versus requisitos definidos}
+\label{tab:ferramentas}
+\end{center}
+\end{table}
+
+
+Ao longo deste trabalho, conhecemos, estudamos e/ou utilizamos 16
+ferramentas\footnote{Ferramentas estudadas:
+\url{analizo.org},
+\url{codeswat.com},
+\url{cccc.sourceforge.net},
+\url{checkstyle.sourceforge.net},
+\url{http://metricsgrimoire.github.io/CVSAnalY/},
+\url{spinellis.gr/sw/ckjm},
+\url{tools.libresoft.es/cmetrics},
+\url{cscope.sourceforge.net},
+\url{depfind.sourceforge.net},
+\url{intooitus.com/products/infusion},
+\url{ccsl.icmc.usp.br/pt-br/projects/jabuti},
+\url{qualipso.dscpi.uninsubria.it/macxim},
+\url{metrics.sourceforge.net},
+\url{ccse.kfupm.edu.sa/~oometer/oometer},
+\url{scitools.com},
+\url{arisa.se}.
+}para análise de código-fonte.
+%
+Na Tabela \ref{tab:ferramentas}, as ferramentas estudadas são comparadas com
+os requisitos. Percebe-se que nenhuma delas preenche todos os requisitos.
+%
+Dessa forma, defendemos que para promover o uso de métricas de código-fonte por
+desenvolvedores em geral, é necessária uma ferramenta que sistematize a
+avaliação do código-fonte.
+%
+Adicionalmente, com exceção do software restrito Infusion, que conhecemos quando
+já estávamos em um estágio avançado de desenvolvimento de nossa pesquisa, os coletores
+de métricas de código-fonte que analisamos possuem, em geral, uma ou mais
+dessas carências:
+
+\begin{enumerate}
+
+\item \textbf{Associação entre resultados numéricos e forma de interpretá-los:}
+%
+Ferramentas de métricas frequentemente mostram seus resultados como valores
+numéricos isolados para cada métrica.
+
+\item \textbf{Flexibilidade nessa interpretação:}
+%
+Algumas ferramentas mostram indicadores binários (bom ou ruim) para os valores
+das métricas, mas não há forma de configurar os valores de referência.
+
+\item \textbf{Flexibilidade para funcionar com diferentes linguagens:}
+%
+As ferramentas que não pecam nos quesitos anteriores foram desenhadas
+especificamente para uma só linguagem de programação.
+
+\item \textbf{Criação de novas métricas}: capacidade de estender seu uso com
+novas métricas, derivadas das existentes na ferramenta.
+
+\end{enumerate}
+
+Baseados nesses conceitos desenvolvemos o que é hoje o Kalibro Metrics:
+um serviço responsável pelo suporte à interpretação das métricas.
+%
+Do ponto de vista de implementação, foi definida uma interface de conexão
+simples para delegar a coleta de valores para ferramentas de análise de
+código-fonte existentes.
+%
+Dessa forma, o Kalibro pode se conectar às ferramentas mais interessantes
+para o contexto de cada software analisado.
+
+Como primeira ferramenta base, foi escolhida a Analizo, pelas características
+comentadas na Seção \ref{sec:analizo}.
+%
+Posteriormente, o CheckStyle foi integrado para termos uma ferramenta
+especialista na análise de código escrito em Java no projeto Mezuro, fornecendo
+métricas mais específica do paradigma de orientação a objetos para código
+Java.
+
+O Kalibro foi desenvolvido de forma modular e desacoplada, para facilitar
+modificações, incrementos e incorporações de outras ferramentas e diferentes
+interfaces de usuário (camadas de visualização).
+%
+Toda a lógica, processamento e persistência foram isolados em um núcleo
+independente de interface com o usuário, que chamamos de \textit {KalibroCore},
+e o acesso remoto está implementado na interface do serviço,
+\textit{KalibroService}.
+%
+Os detalhes da arquitetura da Kalibro Metrics e uma discussão das funcionalidades
+do projeto Mezuro do ponto de vista da arquitetura do Kalibro estão no
+Apêndice \ref{apend:kalibro}.
+
+Por fim, depois do primeiro protótipo do Mezuro, o desenvolvimento do
+Kalibro Metrics foi associado ao desenvolvimento do plugin Mezuro.
+%
+Na prática, o plugin Mezuro funciona como uma camada de visualização dos resultados e
+funcionalidades do Kalibro Metrics.
+
