@@ -1,6 +1,6 @@
 #TCC1 de Daniel Costa Bucher FGA-UnB
 
-Aluno: Daniel Costa Bucher
+Aluno: Daniel Costa Bucher  
 Orientador: Prof. Dr. Paulo Roberto Miranda Meirelles
 
 Título: Redes de colaboração federadas: projeto e estudo de caso para as universidades brasileiras
@@ -8,11 +8,9 @@ Título: Redes de colaboração federadas: projeto e estudo de caso para as univ
 Licenciado em Creative Commons Atribuição 3.0:
 http://creativecommons.org/licenses/by/3.0/
 
-Esse trabalho utiliza o template desenvolvido e adaptado pelo professor Edson Alves <edsomjr@gmail.com> disponível em:
+Esse trabalho utiliza o template desenvolvido e adaptado pelo professor Edson Alves <edsomjr@gmail.com> disponível em [Template TCC FGA](https://github.com/fga-unb/template-latex-tcc)
 
-	https://github.com/fga-unb/template-latex-tcc
-
-## Instalando o abnTeX2
+## Instruções de instalação do abnTeX2
 
 ### Ubuntu 12.10 ou superior
 
@@ -98,7 +96,7 @@ Informações para instalar o abnTeX2 no Mac OS X:
 
 https://code.google.com/p/abntex2/wiki/InstalacaoMac
 
-## Compilando
+## Instruções de compilação do texto
 
 Para compilar o texto através do Makefile digite:
 
