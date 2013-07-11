@@ -76,3 +76,89 @@ de \emph{bugs} identificados e mais sugestões de melhorias.
 
 \section{Noosfero}
 
+Noosfero~\footnote{\url{http://www.noosfero.org}}
+é uma  plataforma web livre para criação de redes sociais desenvolvida
+pela Cooperativa de Tecnologias Livres - Colivre
+~\footnote{\url{http://www.colivre.coop.br}} 
+em 2007 sob licença AGPL v.3 com a proposta de permitir aos usuários criarem sua
+própria rede social personalizada, livre e autônoma.
+%
+As principais funcionalidades do Noosfero incluem:
+
+\begin{itemize}
+
+\item Rede Social (três entidades: pessoas, comunidades e organizações);
+\item CMS: pastas, artigos, RSS, \textit{upload} e publicação de imagens e
+arquivos;
+\item \textit{Blog} com sistema de notificação de comentários.
+\item Galeria de imagens;
+\item Agenda de eventos compartilhadas;
+\item e-Portfolios (individuais \& de grupos);
+
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+O Noosfero foi desenvolvido na linguagem de programação Ruby
+~\footnote{\url{http://www.ruby-lang.org/en/}}
+versão 1.8.7 e utiliza o framework para aplicações web Ruby on Rails
+~\footnote{\url{http://rubyonrails.org/}}
+versão 2.3.5.
+%
+A escolha destas tecnologias se baseou no fato de que o Ruby possui uma sintaxe
+simples e elegante, de fácil leitura, o que aumenta a manutenibilidade do sistema,
+característica importante num projeto de software livre que visa atrair
+desenvolvedores externos. 
+%
+Outras características importantes que influenciaram essa escolha são a alta
+capacidade produtiva que o framework possui por priorizar conceitos como
+"\textit{convention over configuration}" e DRY (\textit{Don't Repeat Yourself})
+e o alinhamento entre a comunidade do Ruby on Rails com metodologias ágeis de
+desenvolvimento de software evidenciada em uma série de ferramentas que
+viabilizam o uso de TDD~\footnote{Desenvolvimento orientado a testes}
+e BDD~\footnote{Design orientado a comportamento}, práticas adotadas no
+desenvolvimento do Noosfero.
+
+%------------------------------------------------------------------------------%
+
+A segurança também foi uma preocupação na concepção do projeto, o que levou os
+desenvolvedores a tomar a decisão de homologar a ferramenta apenas para a
+versão do Debian \textit{stable}, na época a versão \textit{squeeze} por este
+ser reconhecido por passar por rigorosos testes de segurança e correção de
+falhas antes de seu lançamento. 
+%
+Para manter a compatibilidade, as versões do Ruby e do Rails utilizadas no
+Noosfero são as versões disponibilizadas nos repositórios do Debian
+\textit{squeeze}.
+
+A arquitetura do Noosfero foi desenvolvida para permitir que este seja facilmente
+expansível de forma que \textit{features} que não sejam comuns ao conceito de
+redes sociais sejam desenvolvidos como \textit{plugins}, assim diminuindo
+o acoplamento e aumentando a coesão dos diversos módulos do sistema.
+%
+Uma das grandes vantagens em se criar uma aplicação com arquitetura extensível
+é o fato de o desenvolvedor criar seus \textit{plugins}
+sem ter acesso ao código fonte do software, somente a documentação. A
+ativação de \textit{plugins} pode ser feita através da interface administrativa
+da própria rede.
+
+\begin{figure}
+	\centering
+	\label{plugins}
+		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/plugins.eps}
+	\caption{Arquitetura de plugins do Noosfero}
+\end{figure}
+
+Essa arquitetura é muito benéfica à implantação do Noosfero em diferentes
+contextos, como por exemplo, um ambiente social virtual para economia
+solidária ou um ambiente de colaboração virtual com foco no conhecimento
+científico colaborativo. Os dois ambiente compartilham de um núcleo
+comum a todas as redes sociais, mas diferem no uso de \textit{plugins}
+com funcionalidades próprias às suas necessidades específicas.
+
+A comunidade que colabora com o Noosfero presa muito pela qualidade
+do código e por isso exige um certo nível de testes antes de aprovar
+uma contribuição tanto no \textit{core} quanto em algum de seus
+\textit{plugins}. A Figura \ref{plugins} apresenta a arquitetura
+expansível do Noosfero.
+
