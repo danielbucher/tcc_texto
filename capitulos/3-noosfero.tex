@@ -1,5 +1,16 @@
 \chapter{Noosfero}
 
+Nesse capítulo fazemos um apanhado dos benefícios de se utilizar uma
+plataforma de software livre e introduzimos a plataforma para criação de
+redes sociais livres Noosfero. Escolhemos trabalhar com software livre por
+entendermos que este é um integrante fundamental no ensino da ciência e 
+tecnologia, estando alinhado à ideologia de livre compartilhamento de
+conhecimento. Outro fator fundamental para a utilização de software livre é o
+fato de não termos que nos comprometermos a assinar um termo de compromisso
+comum em redes sociais proprietárias, que, em geral, possuem cláusula que dão à
+empresa proprietária a propriedade intelectual em cima de todo o conteúdo
+gerado nela.
+
 
 \section{Software Livre}
 
@@ -91,7 +102,8 @@ As principais funcionalidades do Noosfero incluem:
 \item Rede Social (três entidades: pessoas, comunidades e organizações);
 \item CMS: pastas, artigos, RSS, \textit{upload} e publicação de imagens e
 arquivos;
-\item \textit{Blog} com sistema de notificação de comentários.
+\item \textit{Blog} com sistema de notificação de comentários;
+\item Fórum de discussões;
 \item Galeria de imagens;
 \item Agenda de eventos compartilhadas;
 \item e-Portfolios (individuais \& de grupos);
@@ -102,7 +114,7 @@ arquivos;
 
 O Noosfero foi desenvolvido na linguagem de programação Ruby
 ~\footnote{\url{http://www.ruby-lang.org/en/}}
-versão 1.8.7 e utiliza o framework para aplicações web Ruby on Rails
+versão 1.8.7 e utiliza o framework MVC para aplicações web Ruby on Rails
 ~\footnote{\url{http://rubyonrails.org/}}
 versão 2.3.5.
 %
@@ -135,6 +147,8 @@ Para manter a compatibilidade, as versões do Ruby e do Rails utilizadas no
 Noosfero são as versões disponibilizadas nos repositórios do Debian
 \textit{squeeze}.
 
+%------------------------------------------------------------------------------%
+
 A arquitetura do Noosfero foi desenvolvida para permitir que este seja facilmente
 expansível, de forma que \textit{features} que não sejam comuns ao conceito de
 redes sociais sejam desenvolvidos como \textit{plugins}, assim diminuindo
@@ -145,19 +159,19 @@ Uma das grandes vantagens em se criar uma aplicação com arquitetura extensíve
 sem precisar modificar o código fonte do da ferramenta, além de tornar mais
 fácil o isolamento de \textit{bugs} encontrados. 
 
-A Colivre, que atualmente é a única responsável por aprovar solicitações de
-alteração no código, exige que os \textit{plugins} tenham um certo nível de
-testes para que este possa ser incorporado à uma versão do Noosfero para
-evitar a inserção de \textit{bugs} que afetem o \textit{core} ou
-outros \textit{plugins} além de manter o padrão de qualidade de código. A
-Fig. 1 (\ref{plugins}) apresenta a arquitetura expansível do Noosfero.
-
 \begin{figure}[h]
 	\centering
 	\label{plugins}
 		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/plugins.eps}
 	\caption{Arquitetura de plugins do Noosfero}
 \end{figure}
+
+A Colivre, que atualmente é a única responsável por aprovar solicitações de
+alteração no código, exige que os \textit{plugins} tenham um certo nível de
+testes para que este possa ser incorporado à uma versão do Noosfero para
+evitar a inserção de \textit{bugs} que afetem o \textit{core} ou
+outros \textit{plugins} além de manter o padrão de qualidade de código. A
+Fig. 1 (\ref{plugins}) apresenta a arquitetura expansível do Noosfero.
 
 Essa abordagem arquitetural é muito benéfica para a diversidade de contextos
 em que o Noosfero pode ser implantado. Diversidade esta que pode ser evidenciada
@@ -170,6 +184,46 @@ acadêmico de forma colaborativa, ambos desenvolvidos utilizando o Noosfero.
 Dessa forma, os dois ambientes compartilham um núcleo comum às redes sociais
 no geral, mas diferem no uso de \textit{plugins} com funcionalidades próprias
 às suas necessidades específicas.
+
+%------------------------------------------------------------------------------%
+
+A Fig. 2 (\ref{noosfero-arch}) apresenta uma visão arquitetural de alto nível
+do núcleo do Noosfero. Vale a pena ressaltar alguns componentes desta arquitetura:
+
+\begin{figure}[h]
+	\centering
+	\label{noosfero-arch}
+		\includegraphics[keepaspectratio=true,scale=0.25]
+		{figuras/noosfero_architeture.eps}
+	\caption{Visão arquitetural do Noosfero}
+\end{figure}
+
+\begin{itemize}
+	\item[Varnish:] acelerador de aplicações web também conhecido como cache
+	de proxy reverso HTTP. É utilizado quando for necessário acessar conteúdo
+	estático,imagens, \textit{scripts} e folhas de estilos.
+	\item[Apache:] \textit{web-server} utilizado como servidor de \textit{proxy}
+	reverso. Sua função é encaminhar as requisições que chegam para uma das
+	instâncias do Thin.
+	\item[Thin:] \textit{app-server} utilizado para processar as requisições
+	de entrada e saída e encaminhá-las para o Noosfero para que este possa
+	executá-las. Pode ser configurado para utilizar mais de um processo para
+	realizar balanceamento de carga. É recomendável o uso de dois processos do
+	\textit{Thin} por núcleo de processador do servidor hospedeiro.
+	\item[Action Dispatch:] funciona como roteador. Sua função é mapear as
+	requisições que chegam a suas respectivas \textit{controllers}.
+	\item[Controller:] controla o fluxo da aplicação. Realiza a ligação entre as
+	entidades de \textit{model} e de \textit{view} através de chamadas de métodos.
+	\item[Model:] representa as entidades do domínio da aplicação. A lógica 
+	da aplicação é implementado nas classes de \textit{model}.
+	\item[View:] responsável pela visualização das páginas, isto é,
+	as saídas em HTML da aplicação.
+	\item[Active Record:] realiza o mapeamento entre os objetos de \textit{model}
+	e o modelo relacional utilizado no banco de dados da aplicação.
+	
+\end{itemize}
+
+
 
 
 
