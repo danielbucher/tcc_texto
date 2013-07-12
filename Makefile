@@ -25,7 +25,7 @@ EDITAVEIS_FILES = $(addprefix $(EDITAVEIS_DIR)/, $(EDITAVEIS_SOURCES))
 
 CHAPTERS_DIR = capitulos
 CHAPTERS_SOURCES = 1-introducao.tex 2-midias-sociais.tex 3-noosfero.tex \
-					4-requisitos.tex 5-conclusao.tex
+					4-rede-unb.tex 5-conclusao.tex
 
 CHAPTERS_FILES = $(addprefix $(CHAPTERS_DIR)/, $(CHAPTERS_SOURCES))
 
