@@ -202,27 +202,37 @@ do núcleo do Noosfero. Vale a pena ressaltar alguns componentes desta arquitetu
 \end{figure}
 
 \begin{itemize}
-	\item[Varnish:] acelerador de aplicações web também conhecido como cache
-	de proxy reverso HTTP. É utilizado quando for necessário acessar conteúdo
-	estático,imagens, \textit{scripts} e folhas de estilos.
-	\item[Apache:] \textit{web-server} utilizado como servidor de \textit{proxy}
-	reverso. Sua função é encaminhar as requisições que chegam para uma das
-	instâncias do Thin.
-	\item[Thin:] \textit{app-server} utilizado para processar as requisições
-	de entrada e saída e encaminhá-las para o Noosfero para que este possa
-	executá-las. Pode ser configurado para utilizar mais de um processo para
-	realizar balanceamento de carga. É recomendável o uso de dois processos do
-	\textit{Thin} por núcleo de processador do servidor hospedeiro.
-	\item[Action Dispatch:] funciona como roteador. Sua função é mapear as
-	requisições que chegam a suas respectivas \textit{controllers}.
-	\item[Controller:] controla o fluxo da aplicação. Realiza a ligação entre as
-	entidades de \textit{model} e de \textit{view} através de chamadas de métodos.
-	\item[Model:] representa as entidades do domínio da aplicação. A lógica 
-	da aplicação é implementado nas classes de \textit{model}.
-	\item[View:] responsável pela visualização das páginas, isto é,
+	\item \textbf{Varnish:} acelerador de aplicações web também conhecido 
+	como cache de proxy reverso HTTP. É utilizado quando for necessário
+	acessar conteúdo estático,imagens, \textit{scripts} e folhas de estilos.
+
+	\item \textbf{Apache:} \textit{web-server} utilizado como servidor de 
+	\textit{proxy} reverso. Sua função é encaminhar as requisições que
+	chegam para uma das instâncias do Thin.
+
+	\item \textbf{Thin:} \textit{app-server} utilizado para processar as
+	requisições de entrada e saída e encaminhá-las para o Noosfero para que
+	este possa executá-las. Pode ser configurado para utilizar mais de um
+	processo para realizar balanceamento de carga. É recomendável o uso de
+	dois processos do \textit{Thin} por núcleo de processador do servidor
+	hospedeiro.
+	
+	\item \textbf{ActionDispatch:} funciona como roteador. Sua função é
+	mapear as requisições que chegam a suas respectivas \textit{controllers}.
+	
+	\item \textbf{Controller:} controla o fluxo da aplicação. Realiza a
+	ligação entre as entidades de \textit{model} e de \textit{view} através
+	de chamadas de métodos.
+	
+	\item \textbf{Model:} representa as entidades do domínio da aplicação.
+	A lógica da aplicação é implementado nas classes de \textit{model}.
+
+	\item \textbf{View:} responsável pela visualização das páginas, isto é,
 	as saídas em HTML da aplicação.
-	\item[Active Record:] realiza o mapeamento entre os objetos de \textit{model}
-	e o modelo relacional utilizado no banco de dados da aplicação.
+	
+	\item \textbf{Active Record:} realiza o mapeamento entre os objetos de
+	\textit{model} e o modelo relacional utilizado no banco de dados da
+	aplicação.		
 	
 \end{itemize}
 
