@@ -139,13 +139,13 @@ desenvolvimento do Noosfero.
 A segurança também foi uma preocupação na concepção do projeto, o que levou os
 desenvolvedores a tomar a decisão de homologar a ferramenta apenas para a
 versão do Debian~\footnote{\url{http://www.debian.org/}}
-\textit{stable}, na época a versão de codinome \textit{squeeze}, por este
-ser reconhecido por passar por rigorosos testes de segurança e correção de
-falhas antes de seu lançamento. 
+\textit{stable}, nesta fase do trabalho de acordo com a versão de codinome
+\textit{Squeeze}, por este ser reconhecido por passar por rigorosos testes de
+segurança e correção de falhas antes de seu lançamento. 
 %
 Para manter a compatibilidade, as versões do Ruby e do Rails utilizadas no
 Noosfero são as versões disponibilizadas nos repositórios do Debian
-\textit{squeeze}.
+\textit{Squeeze}.
 
 %------------------------------------------------------------------------------%
 
@@ -156,7 +156,7 @@ o acoplamento e aumentando a coesão dos diversos módulos do sistema.
 %
 Uma das grandes vantagens em se criar uma aplicação com arquitetura extensível
 é o fato de que o desenvolvedor pode criar um \textit{plugins}
-sem precisar modificar o código fonte do da ferramenta, além de tornar mais
+sem precisar modificar o código fonte da ferramenta, além de tornar mais
 fácil o isolamento de \textit{bugs} encontrados. 
 
 \begin{figure}[h]
@@ -171,7 +171,7 @@ alteração no código, exige que os \textit{plugins} tenham um certo nível de
 testes para que este possa ser incorporado à uma versão do Noosfero para
 evitar a inserção de \textit{bugs} que afetem o \textit{core} ou
 outros \textit{plugins} além de manter o padrão de qualidade de código. A
-Fig. 1 (\ref{plugins}) apresenta a arquitetura expansível do Noosfero.
+Figura 1 (\ref{plugins}) apresenta a arquitetura expansível do Noosfero.
 
 Essa abordagem arquitetural é muito benéfica para a diversidade de contextos
 em que o Noosfero pode ser implantado. Diversidade esta que pode ser evidenciada
@@ -183,11 +183,14 @@ Stoa, um ambiente virtual para a disseminação de conhecimento em âmbito
 acadêmico de forma colaborativa, ambos desenvolvidos utilizando o Noosfero.
 Dessa forma, os dois ambientes compartilham um núcleo comum às redes sociais
 no geral, mas diferem no uso de \textit{plugins} com funcionalidades próprias
-às suas necessidades específicas.
+às suas necessidades específicas. Na seção \ref{requisitos}, apresentamos
+algumas funcionalidades que serão desenvolvidas no formato de um \textit{plugin},
+Comunidade-UnB.
+
 
 %------------------------------------------------------------------------------%
 
-A Fig. 2 (\ref{noosfero-arch}) apresenta uma visão arquitetural de alto nível
+A Figura 2 (\ref{noosfero-arch}) apresenta uma visão arquitetural de alto nível
 do núcleo do Noosfero. Vale a pena ressaltar alguns componentes desta arquitetura:
 
 \begin{figure}[h]

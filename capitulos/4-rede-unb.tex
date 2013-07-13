@@ -56,7 +56,7 @@ e Conhecimento) que tem uma sede localizada no sub-solo do ICC no campus Darcy
 Ribeiro. Esta parceria acelerou o processo de implantação de uma instância do
 Noosfero (atualmente chamada de Comunidade UnB) em um ambiente de
 testes~\footnote{Disponível em \url{http://comunidade.unb.br}}, instalada em um
-servidor do CDTC, que já está disponível para acesso externo. A Fig. 3
+servidor do CDTC, que já está disponível para acesso externo. A Figura 3
 (\ref{comunidade-unb}) apresenta a tela inicial da rede de colaboração da UnB
 em seu ambiente de testes.
 
@@ -70,10 +70,10 @@ em seu ambiente de testes.
 
 O apoio institucional é fundamental para o funcionamento deste trabalho de forma
 contínua uma vez que queremos que a Comunidade UnB seja a rede de colaboração
-oficial da Universidade. Portanto pretendemos utilizar este trabalho como um
+oficial da Universidade. Portanto, pretendemos utilizar este trabalho como um
 ponto de partida para formalizar uma proposta de criação de um projeto de
 desenvolvimento e manutenção desta rede através da colaboração de alunos
-bolsistas, inclusive já foi submetida uma solicitação de bolsas para um projeto
+bolsistas. Por exemplo, já foi submetida uma solicitação de bolsas para um projeto
 de iniciação científica no edital do ProIC (Projeto de Iniciação científica)
 aberto no primeiro semestre de 2013 pelo DPP (Decanato de Pesquisa e Pós-
 Graduação) da UnB.
@@ -83,10 +83,12 @@ Graduação) da UnB.
 \subsection{Uso do Noosfero na Disciplina de Manutenção e Evolução de Software}
 \label{mes-unb}
 
-Um exemplo do uso de uma rede de colaboração como ambiente de apoio ao ensino
-pode ser visto no caso da disciplina do curso de Engenharia de Software de MES
-(Manutenção e Evolução de Software) ministrada no primeiro semestre de 2013 pelo
-professor Paulo Meirelles na qual eu participei como monitor voluntário. 
+Um exemplo do uso de uma rede de colaboração, como ambiente de apoio ao ensino,
+pode ser visto no caso da disciplina do curso de Engenharia de Software de
+Manutenção e Evolução de Software (MES), ministrada, no primeiro semestre de
+2013, pelo professor Paulo Meirelles, na qual eu participei como monitor
+voluntário.
+
 A disciplina teve como objetivo permitir com que os
 alunos pudessem vivenciar situações reais de desenvolvimento de software ao
 exercer atividades de manutenção, seja evolutiva, corretiva, perfectiva ou
@@ -97,9 +99,9 @@ criada na rede de colaboração da USP, o Stoa, como ferramenta de comunicação
 utilizado pelo grupo e para a publicação dos resultados dos projetos.
 %
 A turma foi divida em grupos que selecionaram o projeto, dentro de uma lista
-de opções fornecidas pelo professor, no qual desejavam atuar. Foi criado um sub-
-grupo, que funciona como uma comunidade normal, porém vinculada à comunidade
-da disciplina, para cada projeto da disciplina. A Fig. 4 (\ref{mes-unb})
+de opções fornecidas pelo professor, no qual desejavam atuar. Foi criado um 
+sub-grupo, que funciona como uma comunidade normal, porém vinculada à comunidade
+da disciplina, para cada projeto da disciplina. A Figura 4 (\ref{mes-unb})
 apresenta a página da ementa da comunidade supracitada. 
 
 \begin{figure}[h]
@@ -110,7 +112,7 @@ apresenta a página da ementa da comunidade supracitada.
 	\caption{Comunidade da disciplina de Manutenção e Evolução de Software}
 \end{figure}
 
-A Fig. 5 (\ref{analizo}) apresenta o \textit{blog} do sub-grupo do sub-grupo
+A Figura 5 (\ref{analizo}) apresenta o \textit{blog} do sub-grupo
 criado para o projeto de manutenção na ferramenta Analizo~\footnote{Disponível
 em \url{http://social.stoa.usp.br/analizo}}, uma ferramenta livre
 para análise estática de código. O grupo optou por utilizar o \textit{blog}
@@ -135,13 +137,14 @@ assim coletar \textit{feedbacks} e propostas de melhorias para a mesma.
 %------------------------------------------------------------------------------%
 
 \section{Levantamento de Requisitos da Comunidade UnB}
+\label{requisitos}
 
 Esta seção apresenta os requisitos levantados por nós para a disponibilização
 da rede de colaboração da UnB. As sub-seções a seguir apresentam alguns
-requisitos funcionais e não funcionais que foram observados por nós, levando
+requisitos funcionais e não funcionais que foram observados, levando
 em consideração que a ferramenta deve satisfazer às necessidades de alunos,
 professores e funcionários da Universidade e garantir a disponibilidade do
-serviço em pelo menos 99,9\% do tempo.
+serviço.
 
 %------------------------------------------------------------------------------%
 \subsection{Funcionalidades}
@@ -184,7 +187,7 @@ mesmo durante picos de acesso estimados em até 30 mil usuários simultâneos,
 que dá aproximadamente 75\% do total de candidatos a usuários da Universidade
 que possui atualmente 2.445 professores, 2.630 técnicos-administrativos
 e 28.570 alunos regulares e 6.304 de pós-graduação, totalizando de 39.949
-\cite{unbInstituicao}. Como explicado na seção \ref{noosfer-section}, o Noosfero
+\cite{unbInstituicao}. Como explicado na seção \ref{noosfero-section}, o Noosfero
 utiliza o \textit{web-server} Apache como um servidor de \textit{proxy} reverso
 que realizar o balanceamento de carga entre as diversas instâncias do Thin,
 configuradas durante a instalação, sendo que são recomendadas a configuração de
@@ -196,7 +199,7 @@ para manter um nível de performance aceitável durante picos de acesso, o que
 necessitaria de uma máquina com pelo menos 4 núcleos de processamento para
 hospedar o sistema. No entanto, essa estimativa foi realizada com base em
 depoimentos de usuários destas tecnologias e faz-se necessária a execução de
-um \textit{benchmark} mas específico para podermos definir estes parâmetros com
+um \textit{benchmark} mais específico para podermos definir estes parâmetros com
 uma precisão maior.
 
 Quanto à questão de segurança de acesso, o ideal é que a autenticação seja
@@ -224,7 +227,7 @@ público, para se enquadrar no padrão da UnB.
 %
 O \textit{layout} atual utiliza predominantemente as duas cores-padrão definidas
 no Manual de Identidade Visual da Universidade\cite{visualUnB}, o Azul UnB
-(Pantone 654) e o Verde UnB (Pantone 348). Na Fig. 3 (\ref{comunidade-unb})
+(Pantone 654) e o Verde UnB (Pantone 348). Na Figura 3 (\ref{comunidade-unb})
 podemos ver uma versão temporária do \textit{layout} desenvolvida por nós.
 
 %------------------------------------------------------------------------------%
@@ -232,13 +235,13 @@ podemos ver uma versão temporária do \textit{layout} desenvolvida por nós.
 \subsection{Federação}
 
 A transição do Noosfero para uma rede social federada é essencial para a criação
-de um eco-sistema de redes de colaboração que comunicam entre si. A federação
+de um ecosistema de redes de colaboração que comunicam entre si. A federação
 consiste na habilidade de redes diferentes de conversarem entre si de forma que
 um usuário da rede Comunidade UnB poderia receber atualizações de uma comunidade
 em outra rede baseada em Noosfero ou em qualquer outra ferramenta que implemente
 o mesmo protocolo de federação, através de regras pré-acordadas.
 
-A princípio, a estrutura para redes federadas proposta para a plataforma Noosfero
+Em princípio, a estrutura para redes federadas proposta para a plataforma Noosfero
 consistia em um padrão aberto, chamado OStatus
 ~\footnote{\url{http://www.w3.org/community/ostatus/}}, que foi proposto
 por Evan Prodomou para ser utilizado pelo StatusNet~\footnote{\url{
@@ -260,66 +263,82 @@ da W3C e estava no caminho para se tornar um padrão oficial.
 No entanto, em dezembro de 2013, Prodomou declarou que estava desenvolvendo
 um novo projeto chamado \textit{pump.io} quer iria substituir o StatusNEt
 ~\footnote{\url{http://status.net/2012/12/18/upcoming-changes-in-the-status
--net-service}} e que utilizaria um novo protocolo para a federação chamado
+-net-service}} e que utilizará um novo protocolo para a federação chamado
 Activity Streams~\footnote{\url{http://activitystrea.ms/}} baseado em JSON.
-A adoção de um destes dois protocolos está sendo discutida na lista de 
-discussão do Noosfero mas já existe uma previsão para se começar a implementar
-a federação para o mesmo e parte deste trabalho consiste em colaborar com
-esta implementação.
-
+A adoção de um destes dois protocolos está sendo discutida pela comunidade do
+Noosfero, mas já existe uma previsão para se começar a implementar a federação
+para o mesmo, ainda em 2013. Parte deste trabalho consiste em colaborar com esta
+implementação.
 %------------------------------------------------------------------------------%
 
 \section{Cronograma de Trabalho}
 
 O cronograma para o trabalho realizado neste TCC é apresentado na Tabela 1 
-(\ref{cronograma}). As atividades a serem realizadas são:
+(\ref{cronograma}). As atividades planejadas são:
 
 \begin{enumerate}
 	\item Configuração de ambiente de desenvolvimento e testes.
 	\item Pesquisa e desenvolvimento de um \textit{layout} baseado nos
 	padrões de identidade visual da UnB.
-	\item Pesquisa de satisfação dos alunos da disciplina de MES.
+	\item Pesquisa de satisfação dos alunos da disciplina de MES 2013.1 e
+	estudo exploratório com alunos de 2013.2.
 	\item Desenvolvimento da autenticação da Comunidade UnB.
-	\item Colaboração no desenvolvimento do protocolo de federação selecionado.
-	\item Desenvolvimento de novas \textit{features}.
+	\item Colaboração no desenvolvimento do protocolo de federação
+	selecionado.
+	\item Desenvolvimento de novas funcionalidades de acordo com um
+	levantamento de requisitos através das pesquisas e estudos exploratórios
+	planejados.
 	\item Disponibilização da Comunidade UnB em ambiente de homologação.
+	\item Escrita do TCC
+	\item Escrita e submissão de artigo para um workshop/conferência de
+	Informática na Educação (ou similar).
 \end{enumerate}
 
 \begin{table}[h]
 	\centering
 	\label{cronograma}
 	
-	\begin{tabular}{|c|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
-		\textbf{Atividades}	& \textbf{Ago 2013}	& \textbf{Set 2013}	& \textbf{Out 2013}	& \textbf{Nov 2013}	& \textbf{Dez 2013}	\\
+		\textbf{Atividades}	& \textbf{Ago 2013}	& \textbf{Set 2013}
+		& \textbf{Out 2013}	& \textbf{Nov 2013}	& \textbf{Dez 2013}
+		& \textbf{Jan 2014}	\\
 		\hline\hline
 		
 		\hline
-		1	& • 	&	&	&	&	\\
+		1	& • 	&	&	&	&	&	\\
 		\hline
 
 		\hline
-		2	& •	& •	&	&	&	\\
+		2	& •	& •	&	&	&	&	\\
 		\hline
 
 		\hline
-		3	& •	&	&	&	&	\\
+		3	& •	&	&	&	&	&	\\
 		\hline
 
 		\hline
-		4	&	&	& •	&	&	\\
+		4	&	&	& •	&	&	&	\\
 		\hline
 
 		\hline
-		5	& 	&	& •	& •	& •	\\
+		5	& 	&	& •	& •	& •	&	\\
 		\hline
 
 		\hline
-		6	& 	&	& •	& •	& •	\\
+		6	& 	&	& •	& •	& •	&	\\
 		\hline
 
 		\hline
-		7	& 	&	& 	& 	& •	\\
+		7	& 	&	& 	& 	& •	&	\\
+		\hline
+
+		\hline
+		8	& 	&	& 	& • 	& •	&	\\
+		\hline
+
+		\hline
+		9	& 	&	& 	& 	& 	& •	\\
 		\hline
 	\end{tabular}
 
