@@ -140,11 +140,61 @@ assim coletar \textit{feedbacks} e propostas de melhorias para a mesma.
 \label{requisitos}
 
 Esta seção apresenta os requisitos levantados por nós para a disponibilização
-da rede de colaboração da UnB. As sub-seções a seguir apresentam alguns
-requisitos funcionais e não funcionais que foram observados, levando
+da rede de colaboração da UnB.
+%
+As sub-seções a seguir apresentam uma introdução sobre como a comunidade
+do Noosfero realiza o controle das funcionalidades e \textit{bugs} pendentes e
+os requisitos funcionais e não funcionais que foram observados, levando
 em consideração que a ferramenta deve satisfazer às necessidades de alunos,
 professores e funcionários da Universidade e garantir a disponibilidade do
 serviço.
+
+%------------------------------------------------------------------------------%
+\subsection{Controle de Requisitos no Noosfero}
+
+A comunidade do Noosfero realiza o controle das funcionalidades e \textit{bugs}
+pendentes através de um \textit{issue tracker} disponibilizado abertamente no
+\textit{site} de desenvolvimento do mesmo
+~\footnote{\url{http://noosfero.org/Development/WebHome}}. São disponibilizados
+dois \textit{issue trackers} diferentes, um para funcionalidades e outro para
+\textit{bugs}. Ao cadastrar um novo item, o desenvolvedor preenche os campos
+com o título daquele item, uma ou mais categorias para aquele item (e.g. Chat,
+RSSFeeds), a descrição daquele item, o \textit{plugin} relacionado aquele item,
+quando existir, e a versão do Noosfero que aquele item afeta. Para funcionalidades,
+coloca-se a versão em que esta está prevista para ser lançada, enquanto que para
+\textit{bugs}, coloca-se também a versão em que este foi identificado. Com o item
+criado, outro usuários podem adicionar comentários e associar um desenvolvedor
+responsável pela sua implementação.
+
+\begin{figure}[h]
+	\centering
+	\label{issue-tracker}
+		\includegraphics[keepaspectratio=true,scale=0.4]
+		{figuras/issue-tracker.eps}
+	\caption{Issue Tracker do Noosfero}
+\end{figure}
+
+A Figura 6 (\ref{issue-tracker}) apresenta o \textit{issue tracker} para
+funcionalidades do Noosfero.
+%
+Recentemente foi implementado um sistema que possibilita à comunidade declarar
+seu interesse em ver um item resolvido, dessa forma é possível priorizar os
+itens identificados como sendo de maior importância para os usuários e
+desenvolvedores.
+
+Atualmente o controle do \textit{status} dos itens é de responsabilidade da
+Colivre, de forma que somente esta pode rejeitar itens ou declará-los como
+prontos para serem incorporados em alguma futura \textit{release}.
+%
+No encontro de usuários do Noosfero realizado no 14º Fórum Internacional de
+Software Livre, em Julho de 2013, foi decidido seriam realizadas
+reuniões quinzenais entre os vários núcleos de desenvolvedores ativos da
+plataforma com o objetivo de promover uma transparência maior no que diz
+respeitos aos avanços das diversas frentes de trabalho existentes e permitir
+que estas colaborem entre si para alcançar objetivos comuns. Desta forma,
+evita-se que núcleos distintos desenvolvam características similares de forma
+separada por falta de conhecimento do que está sendo desenvolvido pelos outros,
+o que pode representar um desperdício de recurso.
 
 %------------------------------------------------------------------------------%
 \subsection{Funcionalidades}
@@ -239,7 +289,8 @@ de um ecosistema de redes de colaboração que comunicam entre si. A federação
 consiste na habilidade de redes diferentes de conversarem entre si de forma que
 um usuário da rede Comunidade UnB poderia receber atualizações de uma comunidade
 em outra rede baseada em Noosfero ou em qualquer outra ferramenta que implemente
-o mesmo protocolo de federação, através de regras pré-acordadas.
+o mesmo protocolo de federação, através de regras pré-acordadas
+\cite{prodomou2010}.
 
 Em princípio, a estrutura para redes federadas proposta para a plataforma Noosfero
 consistia em um padrão aberto, chamado OStatus
@@ -254,8 +305,7 @@ Atom~\footnote{\url{http://www.atomenabled.org/}} e no protocolo PuSH
 O funcionamento do OStatus pode ser resumido da seguinte forma:
 os \textit{sites} produzem atualizações no formato de \textit{feeds} através
 do padrão Atom e utilizam o protocolo PuSH para enviar estas atualizações
-para outros \textit{sites} \\
-\cite{OStatusBasics}.
+para outros \textit{sites} \cite{OStatusBasics}.
 %
 Posteriormente, OStatus passou a ser desenvolvido como um grupo de trabalho
 da W3C e estava no caminho para se tornar um padrão oficial. 
@@ -273,7 +323,7 @@ implementação.
 
 \section{Cronograma de Trabalho}
 
-O cronograma para o trabalho realizado neste TCC é apresentado na Tabela 1 
+O cronograma para o trabalho realizado neste TCC é apresentado na \\ Tabela 1 
 (\ref{cronograma}). As atividades planejadas são:
 
 \begin{enumerate}
