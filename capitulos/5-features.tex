@@ -1,0 +1,564 @@
+\section{Funcionalidades}
+%TODO explicar o formato de user stories e cenários de uso e correlacioanr
+%com a sessão que trata sobre desenvolvimento de software livre
+%conceituar histórias de usuário, BDD, cenário de uso e teste de aceitação
+%enfatizar que os requisitos não serão apresentados da maneira tradicional
+%(mais próximo de como são definidos nas equipes ágeis e nas comunidades de
+%software livre.
+Nesta seção descrevemos as funcionalidades desenvolvidas ao longo do segundo
+semestre de 2013 que contaram com nossa contribuição e que contribuíram para
+o crescimento da Comunidade UnB.
+
+%------------------------------funcionalidade---------------------------------%
+\subsection{Melhorias no \textit{plugin} de sub-organizações}
+
+As histórias de usuários listadas nesta sub-seção dizem respeito a melhorias
+no \textit{plugin} de sub-organizações do Noosfero e foram desenvolvidas em
+conjunto com a Colivre e a equipe de estagiários do Portal da FGA.
+
+No Noosfero, uma organização é a abstração de uma entidade que pode assumir
+o papel tanto de comunidade quanto de empreendimento. Os cenários de uso das
+histórias a seguir foram especificados utilizando comunidades como exemplo,
+mas as alterações realizadas afetam da mesma forma a relação entre usuários
+e empreendimentos.
+
+%TODO colocar figura da relação de heranças organização -> comunidade/empreendimento
+
+O termo ``organização mãe'' é utilizado para designar uma organização que
+possua sub-organizações, também chamadas de organizações filhas. Conforme
+descrito acima, uma organização mãe pode ser tanto uma comunidade quanto um
+empreendimento.
+
+\subsubsection*{Histórias de usuário:}
+
+%histórias de usuário
+\begin{enumerate}
+
+%--------------------------------história-------------------------------------%
+\item Listar organizações `mãe' na lista de organizações de um usuário
+
+Esta história de usuário está mapeada no ActionItem de número 2825\footnote{\url
+{https://noosfero.org/Development/ActionItem2825}}.
+
+\textbf{Como} um usuário
+
+\textbf{Eu quero} visualizar organizações mãe de sub-organizações que faço
+parte junto à lista de minhas organizações.
+
+\subsubsection*{Cenários de uso:}
+
+%cenários
+\begin{enumerate}
+
+%---------------------------------cenário-------------------------------------%
+\item Ver comunidade `mãe' na página `Gerenciar meus grupos'
+
+\textbf{Dado} que eu estou logado com a usuário `ze'
+
+\textbf{E} `ze' não é membro da comunidade UnB
+
+\textbf{E} `ze' é membro da sub-comunidade de Unb, FGA
+
+\textbf{Quando} eu navegar até a página `Gerenciar meus grupos'
+(/myprofile/ze/memberships)
+
+\textbf{Então} eu tenho que ver a comunidade UnB listada junto às
+demais comunidades que faço parte.
+
+%---------------------------------cenário-------------------------------------%
+\item Ver comunidade `mãe' na página `Comunidades de ze'
+
+\textbf{Dado} que eu estou logado com a usuário `ze'
+
+\textbf{E} `ze' não é membro da comunidade UnB
+
+\textbf{E} `ze' é membro da sub-comunidade de Unb, FGA
+
+\textbf{Quando} eu navegar até a página `Comunidades de ze'
+(/profile/ze/communities)
+
+\textbf{Então} eu tenho que ver a comunidade UnB listada junto às
+demais comunidades que faço parte.
+
+%cenários
+\end{enumerate}
+
+%--------------------------------história-------------------------------------%
+\item Bloco de organizações relacionadas
+
+Esta história de usuário está mapeada no ActionItem de número 2499\footnote{\url
+{https://noosfero.org/Development/ActionItem2499}}.
+
+\textbf{Para} ter acesso às organizações relacionadas a uma organização
+
+\textbf{Como} um usuário
+
+\textbf{Eu quero} visualizar um bloco que liste todas as organizações
+relacionadas à organização atual.
+
+\subsubsection*{Cenários de uso:}
+
+%cenários
+\begin{enumerate}
+
+%---------------------------------cenário-------------------------------------%
+\item Adicionar um bloco de sub-organizações
+
+\textbf{Dado} que eu estou logado com meu usuário
+
+\textbf{E} meu usuário é administrador da comunidade X
+
+\textbf{Quando} eu navegar até o painel de controle da comunidade X
+
+\textbf{E} eu clicar em "Editar blocos laterais"
+
+\textbf{E} eu clicar em "Adicionar bloco"
+
+\textbf{Então} eu tenho que ver a opção 'Organizações Relacionadas'.
+
+%---------------------------------cenário-------------------------------------%
+\item Listar todas as sub-organizações na organização `mãe'
+
+\textbf{Dado} que eu estou logado com meu usuário
+
+\textbf{E} meu usuário é membro da comunidade X
+
+\textbf{E} e a comunidade Y é uma sub-comunidade de X
+
+\textbf{E} e o empreendimento Z é um sub-empreendimento de X
+
+\textbf{E} a comunidade X possua um bloco de organizações relacionadas
+
+\textbf{Quando} eu navegar até a página da comunidade X
+
+\textbf{Então} eu tenho que ver um bloco com o título 'Sub organizações'.
+
+\textbf{E} eu tenho que ver um \textit{link} para a sub-comunidade Y neste
+bloco
+
+\textbf{E} eu tenho que ver um \textit{link} para o sub-empreendimento Z neste
+bloco.
+
+%---------------------------------cenário-------------------------------------%
+\item Listar apenas as sub-comunidades organização `mãe'
+
+\textbf{Dado} que eu estou logado com meu usuário
+
+\textbf{E} meu usuário é membro da comunidade X
+
+\textbf{E} e a comunidade Y é uma sub-comunidade de X
+
+\textbf{E} e o empreendimento Z é um sub-empreendimento de X
+
+\textbf{E} a comunidade X possua um bloco de organizações relacionadas
+
+\textbf{E} o bloco esteja configurado para mostrar apenas comunidades
+
+\textbf{Quando} eu navegar até a página da comunidade X
+
+\textbf{Então} eu tenho que ver um bloco com o título 'Sub comunidades'.
+
+\textbf{E} eu tenho que ver um \textit{link} para a sub-comunidade Y neste
+bloco
+
+\textbf{E} eu não tenho que ver um \textit{link} para o sub-empreendimento Z
+neste bloco.
+
+%---------------------------------cenário-------------------------------------%
+\item Visualizar página de sub-organizações de uma organização `mãe'
+
+\textbf{Dado} que eu estou logado com meu usuário
+
+\textbf{E} meu usuário é membro da comunidade X
+
+\textbf{E} e a comunidade Y é uma sub-comunidade de X
+
+\textbf{E} e o empreendimento Z é um sub-empreendimento de X
+
+\textbf{E} a comunidade X possua um bloco de organizações relacionadas
+
+\textbf{Quando} eu navegar até a página da comunidade X
+
+\textbf{E} eu clicar no link "Ver todos" do bloco de organizações relacionadas
+
+\textbf{Então} eu tenho que ver uma página de sub-organizações
+
+\textbf{E} eu tenho que ver um \textit{link} para a sub-comunidade Y neste
+bloco
+
+\textbf{E} eu tenho que ver um \textit{link} para o sub-empreendimento Z
+neste bloco.
+
+%---------------------------------cenário-------------------------------------%
+\item Visualizar página de sub-comunidades de uma organização `mãe'
+
+\textbf{Dado} que eu estou logado com meu usuário
+
+\textbf{E} meu usuário é membro da comunidade X
+
+\textbf{E} e a comunidade Y é uma sub-comunidade de X
+
+\textbf{E} e o empreendimento Z é um sub-empreendimento de X
+
+\textbf{E} a comunidade X possua um bloco de organizações relacionadas
+
+\textbf{E} o bloco esteja configurado para mostrar apenas comunidades
+
+\textbf{Quando} eu navegar até a página da comunidade X
+
+\textbf{E} eu clicar no link "Ver todos" do bloco de organizações relacionadas
+
+\textbf{Então} eu tenho que ver uma página de sub-organizações
+
+\textbf{E} eu tenho que ver um \textit{link} para a sub-comunidade Y neste
+bloco
+
+\textbf{E} eu não tenho que ver um \textit{link} para o sub-empreendimento Z
+neste bloco.
+
+%---------------------------------cenário-------------------------------------%
+\item Listar todas as organizações `mãe' de uma organização
+
+\textbf{Dado} que eu estou logado com meu usuário
+
+\textbf{E} meu usuário é membro da comunidade X
+
+\textbf{E} e a comunidade Y é `mãe' de X
+
+\textbf{E} e o empreendimento é `pai' de X
+
+\textbf{E} a comunidade X possua um bloco de organizações relacionadas
+
+\textbf{Quando} eu navegar até a página da comunidade X
+
+\textbf{Então} eu tenho que ver um bloco com o título 'Organizações pais'.
+
+\textbf{E} eu tenho que ver um \textit{link} para a sub-comunidade Y neste
+bloco
+
+\textbf{E} eu tenho que ver um \textit{link} para o sub-empreendimento Z neste
+bloco.
+
+%cenários
+\end{enumerate}
+
+%--------------------------------história-------------------------------------%
+\item Visualização completa nas páginas de organização relacionadas
+
+\textbf{Como} um usuário
+
+\textbf{Eu quero} visualizar informações sobre as organizações relacionadas nas
+páginas de organizações relacionadas
+
+\textbf{Para} me informar sobre elas sem precisar visitar a página de cada uma.
+
+\subsubsection*{Cenários de uso:}
+
+%cenários
+\begin{enumerate}
+
+%---------------------------------cenário-------------------------------------%
+\item Visualizar modo completo na página de sub-organizações
+
+\textbf{Dado} a comunidade X
+
+\textbf{E} a comunidade Y é `filha' de X
+
+\textbf{E} o empreendimento Z é `filho' de X
+
+\textbf{Quando} eu navegar até a página de sub-organizações de X
+
+\textbf{E} eu clicar na opção de visualização completa
+
+\textbf{Então} eu tenho que ver as informações
+
+%cenários
+\end{enumerate}
+
+%histórias de usuário
+\end{enumerate}
+
+%-----------------------------------------------------------------------------%
+
+\subsubsection*{Desenvolvedores responsáveis:}
+
+Os seguintes colaboradores do Noosfero participaram do desenvolvimento desta
+funcionalidade:
+
+%desenvolvedores
+\begin{enumerate}
+
+\item Arthur Del Esposte - UnB
+
+\item Aurélio A. Heckert - Colivre
+
+\item Daniel Bucher - UnB
+
+\item David Carlos - UnB
+
+\item Marcos Ramos - UnB
+
+%desenvolvedores
+\end{enumerate}
+
+%------------------------------funcionalidade---------------------------------%
+\subsection{Plugin Comunidade UnB}
+
+\subsubsection*{Histórias de usuário}
+
+O \textit{plugin} Comunidade UnB foi criado para suprir algumas necessidade de
+integração de serviços fornecidos pela universidade e a rede de colaboração que
+estamos propondo, como a autenticação via base de dados mantida pela universidade.
+Assim o usuário vai poder ter acesso ao portal de comunidades através dos mesmos
+dados utilizados para acessar outros serviços como por exemplo o serviço de
+matrícula para alunos ou o serviço de lançamento de notas para professores.
+
+Ao ativar o \textit{plugin}, os campos utilizadas para realizar o \textit{login}
+no sistema serão alterados para os mesmo campos utilizados em sistemas da
+universidade, matrícula para alunos e prefixo do correio eletrônico para
+professores e funcionários técnico-administrativos, e a senha será a mesma.
+
+%TODO adicionar LDAP e CPD nas siglas
+Portanto o \textit{plugin} adiciona o campo matrícula e e-mail institucional
+(caso o usuário deseje ter manter o campo de e-mail original para seu e-mail
+pessoal) além de fazer a integração com o serviço de LDAP no qual o CPD mantém
+os dados dos usuários. Contudo o usuário, durante seu primeiro \textit{login},
+escolhe os campos nome de usuário, nome completo e e-mail.
+
+Foi necessário também retirar a funcionalidade de alteração de senha uma vez
+que queremos manter a compatibilidade entre o portal de comunidades proposto
+e os demais serviços. Desta forma, caso o usuário deseje trocar sua senha 
+mesmo deve procurar o CPD e solicitar a alteração.
+
+Até o momento da escrita deste texto, conseguimos autorização para utilizar
+apenas a base de dados que contém os dados dos alunos de forma que a
+história de usuário e os cenários a seguir levarão em consideração apenas
+a utilização do portal de comunidades pelos alunos, mas a funcionalidade
+se mantém a mesma para professores e servidores técnico-administrativos que
+queiram utilizar o serviço da Comunidade UnB.
+
+%histórias
+\begin{enumerate}
+
+%--------------------------------história-------------------------------------%
+\item Autenticação via LDAP da UnB
+
+\textbf{Como} um aluno da Universidade Brasília
+
+\textbf{Eu quero} me autenticar na rede através da minha matricula e senha
+utilizada em outros sistemas.
+
+\subsubsection*{Cenários de uso:}
+
+%cenários
+\begin{enumerate}
+
+%---------------------------------cenário-------------------------------------%
+\item Primeiro acesso
+
+\textbf{Dado} que sou aluno da UnB
+
+\textbf{E} possuo cadastro ativo na base de dados da UnB
+
+\textbf{E} nunca utilizei o serviço da Comunidade UnB
+
+\textbf{Quando} eu acessar o portal
+
+\textbf{E} preencher os campos matricula e senha com a matrícula e a senha
+fornecidas a mim pela universidade
+
+\textbf{Então} deverei ser direcionado para uma página com o título
+"Primeiro Acesso"
+
+\textbf{E} deverei ver os campos "nome de usuário", "nome completo" e
+"e-mail pessoal" em vazio.
+
+%---------------------------------cenário-------------------------------------%
+\item Registro
+
+\textbf{Dado} que sou aluno da UnB
+
+\textbf{E} me encontro na página de primeiro acesso da Comunidade UnB
+
+\textbf{Quando} eu preencher os campos "nome de usuário",
+"nome completo" e "e-mail pessoal" com "daniel.bucher", "Daniel Costa Bucher" e
+"daniel.bucher88@gmail.com"
+
+\textbf{E} clicar no botão "Registrar"
+
+\textbf{Então} eu devo ser direcionado para meu perfil
+
+\textbf{E} devo ver a url "<domínio>/daniel.bucher"
+
+\textbf{E} devo ver "Daniel Costa Bucher" abaixo da imagem padrão de perfis
+do Noosfero.
+
+%---------------------------------cenário-------------------------------------%
+
+\item Acesso
+
+\textbf{Dado} que sou aluno da UnB
+
+\textbf{E} já utilizei o serviço da Comunidade UnB
+
+\textbf{Quando} eu entrar com minha matricula e senha fornecida pela universidade
+nos campos adequados para autenticação
+
+\textbf{E} clicar em entrar
+
+\textbf{Então} eu devo me encontrar \textit{logado} no sistema com a minha conta.
+
+%cenários
+\end{enumerate}
+
+%histórias
+\end{enumerate}
+
+\subsubsection*{Desenvolvedores responsáveis:}
+
+%desenvolvedores
+
+%TODO adicionar desenvolvedores responsáveis
+
+%desenvolvedores
+
+%------------------------------funcionalidade---------------------------------%
+\subsection{\textit{Plugin} de bloco de videos}
+
+\subsubsection*{História de usuário}
+
+\subsubsection*{Cenário de uso/teste}
+
+\subsubsection*{Desenvolvedores responsáveis}
+ 
+%------------------------------funcionalidade---------------------------------%
+\subsection{Usabilidade do bloco ``\textit{links}''}
+
+%TODO Dividir em mais de uma user story
+
+Implementar melhorias no Bloco ``Links'', para que fique muito mais intuitivo para um usuário personalizar o seu menu lateral. Incluindo;
+- Mover itens por meio de ``Drag and Drop''
+- Interface fácil de incluir links para conteúdo próprio
+
+Implementar melhorias no bloco ``links'' para aumentar a usabilidade:
+  - Permitir reorganização de link via ``drag and drop''
+  - Interface fácil de inserir links para conteúdo
+
+\subsubsection*{Histórias de usuário}
+
+\begin{enumerate}
+
+%--------------------------------história-------------------------------------%
+\item Mover itens por \textit{Drag and Drop}
+
+\textbf{Como} um usuário do Noosfero
+
+\textbf{Eu quero} reordenar os items de um bloco de \textit{links} por meio de
+\textit{Drag and Drop}.
+
+\subsubsection*{Cenários de uso}
+
+\begin{enumerate}
+
+\item Arrastar um item
+
+\textbf{Dado} que eu estou logado com meu usuário
+
+\textbf{E} estou na página de edição de blocos laterais
+
+\textbf{E} eu clico no botão de edição do bloco padrão de links
+
+\textbf{E} eu veja 'Perfil' em cima de 'Galeria de imagens'
+
+\textbf{Quando} arrastar 'Galeria de imagens' para cima de 'Perfil'
+
+\textbf{E} clicar no botão 'Salvar'
+
+\textbf{E} eu for para a página do meu perfil
+
+\textbf{Então} eu tenho que ver 'Galeria de imagens' em cima de 'Perfil'
+no bloco de links padrão do perfil.
+
+\end{enumerate}
+
+%--------------------------------história-------------------------------------%
+\item \textit{Auto-complete} ao adicionar novos itens
+%TODO elaborar user story
+
+\end{enumerate}
+
+%------------------------------funcionalidade---------------------------------%
+\subsection{Convite para participação de comunidades}
+
+Esta funcionalidade prevê melhorias no sistema de convite para participar de
+uma comunidade. Antes de sua implementação, os convites eram realizados
+exclusivamente através de e-mail, seja entrando com o e-mail da pessoa
+diretamente ou pesquisando na lista de contatos de um e-mail passado. Planejamos
+esta funcionalidade para incluir uma interface através da qual um usuário
+possa adicionar facilmente outros usuários da sua lista de amigos pesquisando
+pelo nome, ou, caso deseje convidar um usuário do qual não seja amigo, ou alguém
+que ainda não tenha cadastro na rede através do e-mail.
+
+\subsubsection*{Histórias de usuário}
+
+\begin{enumerate}
+
+%--------------------------------história-------------------------------------%
+\item Convidar usuários da rede
+
+\textbf{Para} facilitar a criação de convites para juntar-se a comunidade
+
+\textbf{Como} um membro de comunidade com permissão para convidar membros
+
+\textbf{Eu quero} convidar usuários através de uma interface que busque na lista
+de perfis de pessoas do ambiente e auto-complete conforme for digitando.
+
+\subsubsection*{Cenários de uso}
+
+\begin{enumerate}
+
+\item Procurar um usuário cadastrado
+
+\textbf{Dado} que eu estou logado com meu usuário
+
+\textbf{E} meu usuário é administrador da comunidade UnB
+
+\textbf{E} o usuário `Zé' existe
+
+\textbf{E} o usuário `Zé' não é membro da comunidade UnB
+
+\textbf{E} eu estou na página de convidar amigos para a comunidade UnB
+
+\textbf{Quando} eu digitar `Zé' no campo de convidar novos amigos
+
+\textbf{Então} eu devo ver um \textit{token}\footnote{Neste contexto, um
+\textit{token} representa um objeto, no caso um perfil de usuário, que possua
+um nome que bata com o campo digitado.} representando o usuário `Zé'.
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+%------------------------------funcionalidade---------------------------------%
+\subsection{Adaptação dos links do menu do usuário na barra principal}
+
+Adaptação dos links do menu do usuário na barra principal com base na usabilidade (melhorando a experiencia do usuário), o que inclui listar de forma agrupada e intuitiva links para os painéis de controle das organizações que a pessoa administra.
+
+\subsubsection*{História de usuário}
+
+\subsubsection*{Cenário de uso/teste}
+
+%------------------------------funcionalidade---------------------------------%
+\subsection{Plugin Lattes}
+
+%TODO adicionar CNPQ nas abreviaturas
+Uma das novas funcionalidades que propomos para o Noosfero foi um \textit{plugin}
+para importar dados da plataforma para currículos acadêmicos disponibilizada
+pelo CNPQ, o Lattes\footnote{\url{http://lattes.cnpq.br/}}.
+
+%TODO importar coisas do currículo lattes (ver script lattes)
+\subsubsection*{História de usuário}
+%TODO definir funcionalidades
+
+\subsubsection*{Cenário de uso/teste}
