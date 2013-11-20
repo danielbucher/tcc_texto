@@ -1,170 +1,128 @@
 \chapter{Uma Rede de Colaboração para a UnB}
 
-%------------------------------------------------------------------------------%
 Como dito anteriormente, o objetivo deste trabalho é disponibilizar um ambiente
-virtual na forma de uma rede de colaboração livre para a Universidade de
-Brasília. Para isto, escolhemos utilizar a plataforma Noosfero por entender que
-esta satisfaz nossas necessidades pelo fato de ser uma plataforma de software
-livre, por ser expansível (através de \textit{plugins}), por ter uma comunidade
+virtual no qual alunos, professores e servidores técnico-administrativos tenham 
+um espaço para a criação e o compartilhamento de conhecimento na forma de uma
+rede de colaboração livre para a Universidade de Brasília.
+%
+Para isto, escolhemos utilizar a plataforma Noosfero por entender que
+as funcionalidades de rede social e de CMS satisfazem nossas necessidades, além
+das vantagens existentes por este ser uma plataforma de software
+livre expansível (através de \textit{plugins}), por ter uma comunidade
 ativa e pela posição geográfica favorável que possuímos em relação ao núcleo de
 desenvolvimento desta, a Colivre, que é uma cooperativa brasileira com sede na
-Bahia. Desta forma, conseguimos facilmente contactar os principais desenvolvedores
-do Noosfero e organizar encontros para discutir parcerias, como já foi realizado
-no \textit{fisl14}~\footnote{Foi realizado um encontro de usuários do Noosfero
-no 14º Fórum Internacional de Software Livre, em Porto Alegre - RS 
-(\url{}http://softwarelivre.org/noosfero/blog/relato-do-encontro-comunitario-
-do-noosfero-no-fisl-14)}.
-
-Queremos que esta rede proposta funcione como um ambiente complementar de ensino
-a ser utilizado nas disciplinas de graduação e pós-graduação e nos projetos da
-Universidade. Assim, seriam criadas comunidades para estes
-que serviriam como um ponto de acesso público aos trabalhos e conteúdos
-desenvolvidos pelos alunos que seriam publicados
-na comunidade na forma de \textit{posts} em \textit{blogs} ou de artigos de
-texto organizados dentro de pastas uma vez que o Noosfero disponibiliza esta
-forma de organização de conteúdo.
+Bahia.
 %
-Também é possível criar sub-comunidades para os diversos projetos que
-eventualmente possam existir dentro de uma disciplina (caso evidenciado na
-sub-seção \ref{mes-unb}) através do \textit{plugin} de sub-comunidades
-desenvolvido pela USP como parte do projeto do Stoa.
+Desta forma, conseguimos facilmente contactar os principais desenvolvedores
+do Noosfero e organizar encontros para discutir parcerias, como ocorrido
+algumas vezes durante este trabalho tanto presencialmente quanto remotamente.
+
+Além de um ambiente virtual para interação social, queremos que a rede proposta
+funcione como um ambiente para os alunos, professores e funcionários da
+universidade compartilhar ideias, produzir conteúdo de forma colaborativa e
+publicá-lo para que possa ser de utilidade para outras pessoas ou parcelas da
+sociedade, uma vez que entendemos ser este um dos papéis de uma Universidade.
 %
-Dentre as vantagens dessa abordagem podemos destacar a possibilidade de acesso
-público, uma vez que produzir conhecimento que seja aproveitado pela comunidade
-seja uma função de uma Universidade, e a persistência do conteúdo desenvolvido
-para as comunidades. A publicidade do conteúdo pode ser configurada através das
-permissões de acesso que podem ser alteradas no painel de controle da comunidade.
-Em relação à persistência, as comunidades não precisariam ter seu conteúdo
-removidos a cada semestre, uma prática comum no uso do Moodle, mas
-possibilitariam que outros integrantes da comunidade dessem continuidade à
-construção dele de forma evolutiva.
+O ambiente disponibiliza para seus usuários a capacidade de criar blogs,
+comunidades, de se relacionar com outras pessoas e ao mesmo tempo associar seu
+perfil à marca da Universidade de Brasília.
 
-Entendemos que o processo de adoção de uma ferramenta nova para o ensino seja
-um processo gradual e que necessite da colaboração do corpo docente para seu
-sucesso, além da necessidade de treinamento para seu uso de forma eficaz.
-Nesse capítulo apresentamos o estado atual do processo de implantação da rede
-de colaboração da UnB e os requisitos para seu funcionamento, além de
-apresentarmos um cronograma de trabalho.
+%TODO referenciar sessão que fala sobre construtivismo...
+Alternativamente, o Comunidade.UnB pode ser utilizado como ferramenta
+complementar de ensino, semelhante ao que foi visto em \ref{subsec:tecciencia}.
+%
+Desta forma comunidades poderiam ser utilizadas para construir e publicar
+conteúdo de áreas de conhecimento, disciplinas e projetos acadêmicos de forma
+colaborativa continuamente ao longo do tempo. Dentre as vantagens dessa
+abordagem podemos destacar a possibilidade de acesso do público ao conteúdo, e a
+persistência do conteúdo desenvolvido para as comunidades. O Noosfero permite
+configurar a publicidade do conteúdo de suas comunidades de forma a decidir
+quais conteúdos serão expostos ao público e quais seriam mantidos privados.
+%
+Atualmente existe também um \textit{plugin} para submissão de trabalhos
+~\footnote{\url{https://gitorious.org/noosfero/noosfero/source/%
+223c8d39273d59e472a5660a37f7a1b8f7441ff9:plugins/work_assignment}
+Acessado em Novembro de 2013} que permite ao professor receber trabalhos diretamente
+na rede.
 
-%------------------------------------------------------------------------------%
-
-\section{Estado Atual}
-
-O trabalho de implantação desta rede de colaboração conta com o apoio do \\ CDTC
-~\footnote{\url{http://comunidade.cdtc.org.br/}}(Centro de Difusão de Tecnologia
-e Conhecimento) que tem uma sede localizada no sub-solo do ICC no campus Darcy
-Ribeiro. Esta parceria acelerou o processo de implantação de uma instância do
-Noosfero (atualmente chamada de Comunidade UnB) em um ambiente de
-testes~\footnote{Disponível em \url{http://comunidade.unb.br}}, instalada em um
-servidor do CDTC, que já está disponível para acesso externo. A Figura
-\ref{comunidade-unb} apresenta a tela inicial da rede de colaboração da UnB
-em seu ambiente de testes.
+No entanto, conforme colocado no capítulo \ref{cap:midias-sociais}, não está
+no escopo deste trabalho discutir as vantagens e desvantagens de um processo
+educacional horizontal diferente do modelo vertical adotado atualmente no qual
+a informação parte do professor e o aluno atua como um receptor do conhecimento.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.3]
-	  {figuras/comunidade.unb.br.eps}
-	\caption{Tela inicial da Comunidade UnB}
-	\label{comunidade-unb}
+	\includegraphics[keepaspectratio=true,scale=0.4]
+	  {figuras/portal-fga.eps}
+	\caption{Ambiente Noosfero como portal da Faculdade do Gama}
+	\label{portal-fga}
 \end{figure}
 
-O apoio institucional é fundamental para o funcionamento deste trabalho de forma
-contínua uma vez que queremos que a Comunidade UnB seja a rede de colaboração
-oficial da Universidade. Portanto, pretendemos utilizar este trabalho como um
-ponto de partida para formalizar uma proposta de criação de um projeto de
-desenvolvimento e manutenção desta rede através da colaboração de alunos
-bolsistas. Por exemplo, já foi submetida uma solicitação de bolsas para um projeto
-de iniciação científica no edital do ProIC (Projeto de Iniciação científica)
-aberto no primeiro semestre de 2013 pelo DPP (Decanato de Pesquisa e Pós-
-Graduação) da UnB.
+O Noosfero permite também fazer uso de suas funcionalidades de CMS para a
+criação de portais institucionais para faculdades, departamentos, laboratórios,
+dentre outros. A Figura \ref{portal-fga} apresenta o uso de um ambiente
+Noosfero como portal para a Faculdade do Gama (FGA). Assim poderíamos ter
+comunidades dentro do Comunidade.UnB com temas próprios que funcionariam
+como portais institucionais.
+
+Nesse capítulo apresentaremos as funcionalidades desenvolvidas para contribuir
+para a adequação do Noosfero como uma rede de colaboração para universidades,
+os requisitos não-funcionais levantados para que esta possa suprir as
+necessidades de segurança e confiabilidade e o processo de colaboração com o
+Noosfero. O capítulo \ref{cap:conclusao} apresenta outras funcionalidades que
+foram levantadas por nós mas não foram desenvolvidas ao longo deste trabalho.
 
 %------------------------------------------------------------------------------%
+\section{Processo de colaboração para o Noosfero}
 
-\subsection{Uso do Noosfero na Disciplina de Manutenção e Evolução de Software}
-\label{mes-unb}
-
-Um exemplo do uso de uma rede de colaboração, como ambiente de apoio ao ensino,
-pode ser visto no caso da disciplina do curso de Engenharia de Software de
-Manutenção e Evolução de Software (MES), ministrada, no primeiro semestre de
-2013, pelo professor Paulo Meirelles, na qual eu participei como monitor
-voluntário.
-
-A disciplina teve como objetivo permitir com que os
-alunos pudessem vivenciar situações reais de desenvolvimento de software ao
-exercer atividades de manutenção, seja evolutiva, corretiva, perfectiva ou
-qualquer outra forma de manutenção, em projetos de software livre e fez uso de
-uma comunidade
-~\footnote{Disponível em: \url{http://social.stoa.usp.br/mes-fga-unb/ementa}}
-criada na rede de colaboração da USP, o Stoa, como ferramenta de comunicação a ser
-utilizado pelo grupo e para a publicação dos resultados dos projetos.
+Um desafio frequente encontrado em comunidades de software livre, principalmente
+comunidades de projetos menores ou novos, é elaborar um processo e utilizar
+ferramentas que facilitem e incentivem a entrada de novas pessoas. Reis (\citeyear{reis2003})
+identificou que 65\% dos projetos de software livre utilizam
+ferramentas de controle de versão, listas de correio eletrônico e a página do
+projeto na internet como ferramenta de comunicação entre usuários e
+desenvolvedores. Em 2011, uma pesquisa realizada por Corbucci (\citeyear{corbucci2011})
+para sua dissertação de mestrado identificou listas de correio eletrônico como
+sendo a ferramenta de comunicação mais comum em projetos de software livre
+seguido pelo Internet Relay Chat (IRC).
 %
-A turma foi divida em grupos que selecionaram o projeto, dentro de uma lista
-de opções fornecidas pelo professor, no qual desejavam atuar. Foi criado um 
-sub-grupo, que funciona como uma comunidade normal, porém vinculada à comunidade
-da disciplina, para cada projeto da disciplina. A Figura \ref{mes-unb}
-apresenta a página da ementa da comunidade supracitada. 
+A comunidade do Noosfero faz uso de todas as ferramentas citadas acima com
+objetivo de minimizar  os problemas de comunicação acarretados pelo fato da
+equipe estar distribuída por todo o país com alguns membros até mesmo fora do
+país além de possibilitar que novos membros da comunidade, sejam eles
+desenvolvedores ou usuários, possam se integrar do que está ocorrendo dentro da
+comunidade e interagir com os membros mais antigos.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.3]
-	  {figuras/mes-unb.eps}
-	\caption{Comunidade da disciplina de Manutenção e Evolução de Software}
-	\label{mes-unb}
-\end{figure}
-
-A Figura \ref{analizo} apresenta o \textit{blog} do sub-grupo
-criado para o projeto de manutenção na ferramenta Analizo~\footnote{Disponível
-em \url{http://social.stoa.usp.br/analizo}}, uma ferramenta livre
-para análise estática de código. O grupo optou por utilizar o \textit{blog}
-para publicar o progresso do projeto no formato de \textit{release notes} e
-retrospectivas dos ciclos de desenvolvimento.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.3]
-	  {figuras/analizo.eps}
-	\caption{Blog do sub-grupo do projeto Analizo da disciplina de MES }
-	\label{analizo}
-\end{figure}
-
-A comunidade da disciplina de MES foi criada na rede da USP, com consentimento
-da administração da mesma, pelo fato de que a rede Comunidade UnB ainda estar
-passando por uma fase de desenvolvimento e testes. Pretendemos apresentar
-na segunda fase deste trabalho a ser apresentado no segundo semestre de 2013
-uma pesquisa de satisfação dos alunos com o uso da plataforma na disciplina e
-assim coletar \textit{feedbacks} e propostas de melhorias para a mesma. 
-
-%------------------------------------------------------------------------------%
-
-\section{Levantamento de Requisitos da Comunidade UnB}
-\label{requisitos}
-
-Esta seção apresenta os requisitos levantados por nós para a disponibilização
-da rede de colaboração da UnB.
+As lista de correio eletrônico~\footnote{\url{%
+https://noosfero.org/Development/MailingLists#Development}} (são duas, uma para
+português e outra para inglês) é a principal ferramenta de comunicação. 
 %
-As sub-seções a seguir apresentam uma introdução sobre como a comunidade
-do Noosfero realiza o controle das funcionalidades e \textit{bugs} pendentes e
-os requisitos funcionais e não funcionais que foram observados, levando
-em consideração que a ferramenta deve satisfazer às necessidades de alunos,
-professores e funcionários da Universidade e garantir a disponibilidade do
-serviço.
+Além disso a comunidade mantém um canal no IRC\footnote{Os canais #noosfero e
+noosfero-br hospedados no freenode até o momento da escrita deste texto.}
+para tirar dúvidas e proporcionar um canal de comunicação mais dinâmica.
+%
+Outra iniciativa recente da comunidade para melhorar a comunicação e manter os
+diversos núcleos de desenvolvimentos do Noosfero a par das últimas atualizações
+é a de realizar reuniões via video-conferência quinzenalmente.
 
-%------------------------------------------------------------------------------%
-\subsection{Controle de Requisitos no Noosfero}
-
-A comunidade do Noosfero realiza o controle das funcionalidades e \textit{bugs}
-pendentes através de um \textit{issue tracker} disponibilizado abertamente no
-\textit{site} de desenvolvimento do mesmo
-~\footnote{\url{http://noosfero.org/Development/WebHome}}. São disponibilizados
-dois \textit{issue trackers} diferentes, um para funcionalidades e outro para
-\textit{bugs}. Ao cadastrar um novo item, o desenvolvedor preenche os campos
-com o título daquele item, uma ou mais categorias para aquele item (e.g. Chat,
-RSSFeeds), a descrição daquele item, o \textit{plugin} relacionado aquele item,
-quando existir, e a versão do Noosfero que aquele item afeta. Para funcionalidades,
-coloca-se a versão em que esta está prevista para ser lançada, enquanto que para
-\textit{bugs}, coloca-se também a versão em que este foi identificado. Com o item
-criado, outro usuários podem adicionar comentários e associar um desenvolvedor
-responsável pela sua implementação.
+A página do Noosfero~\footnote{\url{http://noosfero.org}} possui uma sessão de
+desenvolvimento~\footnote{\url{http://noosfero.org/Development}} que apresenta
+informações necessárias para pessoas que queiram começar a colaborar com o
+mesmo. Nesta página encontramos também um \textit{issue tracker} utilizado para
+cadastrar e controlar as funcionalidades e \textit{bugs} do Noosfero.
+%
+São disponibilizados dois \textit{issue trackers} diferentes, um para
+funcionalidades e outro para \textit{bugs}. Ao cadastrar um novo item, o
+desenvolvedor preenche os campos com o título daquele item, uma ou mais
+categorias para aquele item (e.g. Chat, RSSFeeds), a descrição daquele
+item, o \textit{plugin} relacionado aquele item, quando existir, e a
+versão do Noosfero que aquele item afeta.
+%
+Para funcionalidades, coloca-se a
+versão em que esta está prevista para ser lançada, enquanto que para
+\textit{bugs}, coloca-se também a versão em que este foi identificado. Com o
+item criado, outro usuários podem adicionar comentários e associar um
+desenvolvedor responsável pela sua implementação.
 
 \begin{figure}[h]
 	\centering
@@ -177,59 +135,34 @@ responsável pela sua implementação.
 A Figura \ref{issue-tracker} apresenta o \textit{issue tracker} para
 funcionalidades do Noosfero.
 %
+A pessoa que queira cadastrar novos itens nestes só precisa se cadastrar
+na sessão de desenvolvimento do Noosfero.
+%
 Recentemente foi implementado um sistema que possibilita à comunidade declarar
 seu interesse em ver um item resolvido, dessa forma é possível priorizar os
 itens identificados como sendo de maior importância para os usuários e
 desenvolvedores.
 
-Atualmente o controle do \textit{status} dos itens é de responsabilidade da
-Colivre, de forma que somente esta pode rejeitar itens ou declará-los como
-prontos para serem incorporados em alguma futura \textit{release}.
+A ferramenta utilizada para controle de versão é o git~\footnote{
+\url{http://git-scm.com/}}, uma ferramenta livre de versionamento distribuído
+de código fonte. O repositório oficial do Noosfero encontra-se no Gitorious
+~\footnote{\url{https://gitorious.org/noosfero/noosfero}} com um espelho no
+Gitlab~\footnote{\url{https://gitlab.com/noosfero/noosfero}} e outro no
+Github~\footnote{\url{https://github.com/noosfero/noosfero}}.
 %
-No encontro de usuários do Noosfero realizado no 14º Fórum Internacional de
-Software Livre, em Julho de 2013, foi decidido seriam realizadas
-reuniões quinzenais entre os vários núcleos de desenvolvedores ativos da
-plataforma com o objetivo de promover uma transparência maior no que diz
-respeitos aos avanços das diversas frentes de trabalho existentes e permitir
-que estas colaborem entre si para alcançar objetivos comuns. Desta forma,
-evita-se que núcleos distintos desenvolvam características similares de forma
-separada por falta de conhecimento do que está sendo desenvolvido pelos outros,
-o que pode representar um desperdício de recurso.
+Na página de desenvolvimento da comunidade existe uma série de recomendações
+sobre como enviar \textit{patches} para o Noosfero%
+~\footnote{\url{https://noosfero.org/Development/PatchGuidelines}}
+, desde como versionar seu \textit{patches} até como realizar a solicitação de
+inclusão do seu \textit{patch}, ou \textit{merge-request}, na plataforma.
 
 %------------------------------------------------------------------------------%
-\subsection{Funcionalidades}
 
-As funcionalidades disponíveis no Noosfero, seja em seu \textit{core}
-ou através de \textit{plugins} já nos permite fazer uso da plataforma como
-um ambiente virtual para a troca de conhecimento através das comunidades e
-perfis de usuários, e como portal para departamentos e organizações da
-Universidade (\ref{noosfero-section}).
-%
-A seguir apresentamos algumas funcionalidades que julgamos interessantes
-incorporar na Comunidade UnB, através da criação do \textit{plugin} Comunidade-
-UnB, para melhorar o uso da mesma em um contexto educacional:
+\section{Requisitos Não-funcionais}
 
-	\begin{enumerate}
-		\item Autenticação via base de dados da UnB:
-		Estamos pesquisando a existência de uma base de dados que possa
-		ser utilizada para a autenticação na rede via matrícula. Desta forma,
-		todos os alunos, professores e funcionários da UnB já possuiriam
-		cadastro na rede e precisariam apenas personalizar seu perfil.
-		\item Integração com os diversos Moodles da Universidade:
-		A integração ocorreria no sentido que, ao criar um novo curso no
-		Moodle, uma comunidade seria automaticamente criada na Comunidade
-		UnB. Atualmente a UnB possui uma instância de Moodle para cada
-		campus.
-	\end{enumerate}
-
-Outras possíveis funcionalidades serão coletadas durante uma pesquisa com os
-alunos que utilizaram o Stoa durante a disciplina de MES.
-
-%------------------------------------------------------------------------------%
-\subsection{Requisitos Não-funcionais}
-
-Em relação aos requisitos não funcionais, separamos algumas características que
-julgamos necessárias para o bom funcionamento da Comunidade UnB, principalmente
+Além das funcionalidades desenvolvidas, também investigamos os requisitos
+não-funcionais. Dessa forma, separamos algumas características que
+julgamos necessárias para o bom funcionamento do Comunidade.UnB, principalmente
 em relação à disponibilidade, performance e segurança do sistema.
 
 É importante para o sucesso da Comunidade UnB que esta permaneça disponível
@@ -263,9 +196,7 @@ base de dados o MatriculaWeb
 ~\footnote{\url{https://matriculaweb.unb.br/matriculaweb/}}, serviço de matrícula
 da UnB para autenticar no sistema. Outra possibilidade seria utilizar as bases
 de dados das diversas instâncias de Moodle existente na Universidade.
-	
 
-%------------------------------------------------------------------------------%
 
 Outro aspecto importante que devemos levar em consideração é a adequação da
 Comunidade Unb ao padrão de identidade visual da UnB.
@@ -280,118 +211,6 @@ no Manual de Identidade Visual da Universidade\cite{visualUnB}, o Azul UnB
 (Pantone 654) e o Verde UnB (Pantone 348). Na Figura \ref{comunidade-unb}
 podemos ver uma versão temporária do \textit{layout} desenvolvida por nós.
 
-%------------------------------------------------------------------------------%
+%-----------------------------------------------------------------------------%
 
-\subsection{Federação}
-
-A transição do Noosfero para uma rede social federada é essencial para a criação
-de um ecosistema de redes de colaboração que comunicam entre si. A federação
-consiste na habilidade de redes diferentes de conversarem entre si de forma que
-um usuário da rede Comunidade UnB poderia receber atualizações de uma comunidade
-em outra rede baseada em Noosfero ou em qualquer outra ferramenta que implemente
-o mesmo protocolo de federação, através de regras pré-acordadas
-\cite{prodomou2010}.
-
-Em princípio, a estrutura para redes federadas proposta para a plataforma Noosfero
-consistia em um padrão aberto, chamado OStatus
-~\footnote{\url{http://www.w3.org/community/ostatus/}}, que foi proposto
-por Evan Prodomou para ser utilizado pelo StatusNet~\footnote{\url{
-http://status.net/}}, um servidor  \textit{open-surce} para
-\textit{microblogging} escrito em PHP.
-%
-O OStatus foi construído com base no padrõe para criação de \textit{feeds},
-Atom~\footnote{\url{http://www.atomenabled.org/}} e no protocolo PuSH
-~\footnote{\url{https://code.google.com/p/pubsubhubbub/}}(PubSubHubbub).
-O funcionamento do OStatus pode ser resumido da seguinte forma:
-os \textit{sites} produzem atualizações no formato de \textit{feeds} através
-do padrão Atom e utilizam o protocolo PuSH para enviar estas atualizações
-para outros \textit{sites} \cite{OStatusBasics}.
-%
-Posteriormente, OStatus passou a ser desenvolvido como um grupo de trabalho
-da W3C e estava no caminho para se tornar um padrão oficial. 
-
-No entanto, em dezembro de 2013, Prodomou declarou que estava desenvolvendo
-um novo projeto chamado \textit{pump.io} quer iria substituir o StatusNEt
-~\footnote{\url{http://status.net/2012/12/18/upcoming-changes-in-the-status
--net-service}} e que utilizará um novo protocolo para a federação chamado
-Activity Streams~\footnote{\url{http://activitystrea.ms/}} baseado em JSON.
-A adoção de um destes dois protocolos está sendo discutida pela comunidade do
-Noosfero, mas já existe uma previsão para se começar a implementar a federação
-para o mesmo, ainda em 2013. Parte deste trabalho consiste em colaborar com esta
-implementação.
-%------------------------------------------------------------------------------%
-
-\section{Cronograma de Trabalho}
-
-O cronograma para o trabalho realizado neste TCC é apresentado na Tabela
-\ref{cronograma}. As atividades planejadas são:
-
-\begin{enumerate}
-	\item Configuração de ambiente de desenvolvimento e testes.
-	\item Pesquisa e desenvolvimento de um \textit{layout} baseado nos
-	padrões de identidade visual da UnB.
-	\item Pesquisa de satisfação dos alunos da disciplina de MES 2013.1 e
-	estudo exploratório com alunos de 2013.2.
-	\item Desenvolvimento da autenticação da Comunidade UnB.
-	\item Colaboração no desenvolvimento do protocolo de federação
-	selecionado.
-	\item Desenvolvimento de novas funcionalidades de acordo com um
-	levantamento de requisitos através das pesquisas e estudos exploratórios
-	planejados.
-	\item Disponibilização da Comunidade UnB em ambiente de homologação.
-	\item Escrita do TCC
-	\item Escrita e submissão de artigo para um workshop/conferência de
-	Informática na Educação (ou similar).
-\end{enumerate}
-
-\begin{table}[h]
-	\centering
-	
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\hline
-		\textbf{Atividades}	& \textbf{Ago 2013}	& \textbf{Set 2013}
-		& \textbf{Out 2013}	& \textbf{Nov 2013}	& \textbf{Dez 2013}
-		& \textbf{Jan 2014}	\\
-		\hline\hline
-		
-		\hline
-		1	& • 	&	&	&	&	&	\\
-		\hline
-
-		\hline
-		2	& •	& •	&	&	&	&	\\
-		\hline
-
-		\hline
-		3	& •	&	&	&	&	&	\\
-		\hline
-
-		\hline
-		4	&	&	& •	&	&	&	\\
-		\hline
-
-		\hline
-		5	& 	&	& •	& •	& •	&	\\
-		\hline
-
-		\hline
-		6	& 	&	& •	& •	& •	&	\\
-		\hline
-
-		\hline
-		7	& 	&	& 	& 	& •	&	\\
-		\hline
-
-		\hline
-		8	& 	&	& 	& • 	& •	&	\\
-		\hline
-
-		\hline
-		9	& 	&	& 	& 	& 	& •	\\
-		\hline
-	\end{tabular}
-
-	\caption{Cronograma}	
-	\label{cronograma}
-\end{table}
-%------------------------------------------------------------------------------%
+\input{capitulos/capitulo4/funcionalidades}
