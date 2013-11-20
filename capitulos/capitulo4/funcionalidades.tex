@@ -1,23 +1,72 @@
 \section{Funcionalidades}
+
 %TODO explicar o formato de user stories e cenários de uso e correlacioanr
 %com a sessão que trata sobre desenvolvimento de software livre
 %conceituar histórias de usuário, BDD, cenário de uso e teste de aceitação
 %enfatizar que os requisitos não serão apresentados da maneira tradicional
 %(mais próximo de como são definidos nas equipes ágeis e nas comunidades de
-%software livre.
-Nesta seção descrevemos as funcionalidades desenvolvidas ao longo do segundo
-semestre de 2013 que contaram com nossa contribuição e que contribuíram para
-o crescimento da Comunidade UnB.
+%software livre).
+
+%TODO adicionar bibliografia sobre métodos ágeis e BDD.
+
+As funcionalidades disponíveis no Noosfero, seja em seu \textit{core}
+ou através de \textit{plugins} já nos permitiria fazer uso da plataforma como
+um ambiente virtual para a troca de conhecimento através das comunidades e
+perfis de usuários, e como portal para departamentos e organizações da
+Universidade (\ref{noosfero-section}).
+%
+Nesta seção apresentamos as funcionalidades que julgamos mais interessantes
+de implementarmos, dentro do prazo deste trabalho, para o Comunidade.UnB.
+%
+Dessa forma, descrevemos as funcionalidades desenvolvidas, que contaram com
+nossa contribuição e que contribuíram para o crescimento do Comunidade.UnB.
+
+
+Para melhor apresentarmos tais funcionalidades, o formato utilizado para
+elaborar os requisitos foi o de Histórias de Usuários (\textit{User Stories}),
+prática bastante difundida dentro das comunidades de métodos ágeis e também
+adotada em algumas comunidades de software livre. 
+%
+Além das histórias, utilizamos também o formato de critérios de aceitação, outra
+prática ágil que vem ganhando força com a popularização do
+\textit{Behaviour Driven Design} (BDD).
+%
+O formato adotado é conveniente para nós uma vez que o Noosfero utiliza o
+\textbf{cucumber}\footnote{\url{http://cukes.info/}}, uma ferramenta para
+automatização de testes escritos em linguagem natural criada para apoiar a
+utilização de BDD. No \textbf{cucumber}, os testes são escritos no formato
+de funcionalidades e cenários utilizando os formatos de histórias de
+usuário e de critérios de aceitação utilizados por nós. A Figura
+\ref{cucumber}~\footnote{\url{https://github.com/cucumber/cucumber/wiki}}
+apresenta um exemplo de uso do \textbf{cucumber}.
+
+%TODO adicionar referência à imagem: https://github.com/cucumber/cucumber/wiki
+\begin{figure}[h]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.6]{figuras/cucumber_sample.eps}
+	\caption{Exemplo de utilização do cucumber}
+	\label{cucumber}
+\end{figure}
+
+Apesar do \textbf{cucumber} ter sido desenvolvido para que clientes e usuários
+não técnicos possam escrever os as funcionalidades e os cenários em linguagem
+próxima à linguagem natural, algumas regras devem ser seguidas uma vez que
+a ferramenta precisa traduzir estes textos para uma linguagem que possa ser
+interpretada por um computador de forma a automatizar a execução dos testes.
+%
+Os cenários descritos nesta sessão foram traduzidos para o português e
+adaptados para um formato mais adequado para um texto científico.
 
 
 %------------------------------funcionalidade---------------------------------%
-\subsection{Plugin Comunidade UnB}
+\subsection{Plugin Comunidade.UnB}
 
 \subsubsection*{Histórias de usuário}
 
-O \textit{plugin} Comunidade UnB foi criado para suprir algumas necessidade de
+O \textit{plugin} Comunidade.UnB foi criado para suprir algumas necessidade de
 integração de serviços fornecidos pela universidade e a rede de colaboração que
 estamos propondo, como a autenticação via base de dados mantida pela universidade.
+%
 Assim o usuário vai poder ter acesso ao portal de comunidades através dos mesmos
 dados utilizados para acessar outros serviços como por exemplo o serviço de
 matrícula para alunos ou o serviço de lançamento de notas para professores.
@@ -30,7 +79,7 @@ professores e funcionários técnico-administrativos, e a senha será a mesma.
 %TODO adicionar LDAP e CPD nas siglas
 Portanto o \textit{plugin} adiciona o campo matrícula e e-mail institucional
 (caso o usuário deseje ter manter o campo de e-mail original para seu e-mail
-pessoal) além de fazer a integração com o serviço de LDAP no qual o CPD mantém
+pessoal) além de fazer a integração com o serviço de LDAP no qual o CPD da UnB mantém
 os dados dos usuários. Contudo o usuário, durante seu primeiro \textit{login},
 escolhe os campos nome de usuário, nome completo e e-mail.
 
@@ -44,7 +93,7 @@ apenas a base de dados que contém os dados dos alunos de forma que a
 história de usuário e os cenários a seguir levarão em consideração apenas
 a utilização do portal de comunidades pelos alunos, mas a funcionalidade
 se mantém a mesma para professores e servidores técnico-administrativos que
-queiram utilizar o serviço da Comunidade UnB.
+queiram utilizar o serviço do Comunidade.UnB.
 
 %histórias
 \begin{enumerate}
@@ -69,7 +118,7 @@ utilizada em outros sistemas.
 
 \textbf{E} possuo cadastro ativo na base de dados da UnB
 
-\textbf{E} nunca utilizei o serviço da Comunidade UnB
+\textbf{E} nunca utilizei o serviço do Comunidade.UnB
 
 \textbf{Quando} eu acessar o portal
 
@@ -87,7 +136,7 @@ fornecidas a mim pela universidade
 
 \textbf{Dado} que sou aluno da UnB
 
-\textbf{E} me encontro na página de primeiro acesso da Comunidade UnB
+\textbf{E} me encontro na página de primeiro acesso do Comunidade.UnB
 
 \textbf{Quando} eu preencher os campos "nome de usuário",
 "nome completo" e "e-mail pessoal" com "daniel.bucher", "Daniel Costa Bucher" e
@@ -108,7 +157,7 @@ do Noosfero.
 
 \textbf{Dado} que sou aluno da UnB
 
-\textbf{E} já utilizei o serviço da Comunidade UnB
+\textbf{E} já utilizei o serviço do Comunidade.UnB
 
 \textbf{Quando} eu entrar com minha matricula e senha fornecida pela universidade
 nos campos adequados para autenticação
@@ -136,8 +185,7 @@ nos campos adequados para autenticação
 
 As histórias de usuários listadas nesta sub-seção dizem respeito a melhorias
 no \textit{plugin} de sub-organizações do Noosfero e foram desenvolvidas em
-conjunto com a Colivre e a equipe de estagiários do Portal da Faculdade do
-Gama - FGA.
+conjunto com a Colivre e a equipe do Portal da Faculdade UnB Gama - FGA.
 
 No Noosfero, uma organização é a abstração de uma entidade que pode assumir
 o papel tanto de comunidade quanto de empreendimento. Os cenários de uso das
@@ -158,7 +206,7 @@ empreendimento.
 \begin{enumerate}
 
 %--------------------------------história-------------------------------------%
-\item Listar organizações `mãe' na lista de organizações de um usuário
+\item \underline{Listar organizações `mãe' na lista de organizações de um usuário}
 
 Esta história de usuário está mapeada no ActionItem de número 2825\footnote{\url
 {https://noosfero.org/Development/ActionItem2825}}.
@@ -174,40 +222,40 @@ parte junto à lista de minhas organizações.
 \begin{enumerate}
 
 %---------------------------------cenário-------------------------------------%
-\item Ver comunidade `mãe' na página `Gerenciar meus grupos'
+\item \underline{Ver comunidade `mãe' na página `Gerenciar meus grupos'}
 
 \textbf{Dado} que eu estou logado com a usuário `ze'
 
-\textbf{E} `ze' não é membro da comunidade UnB
+\textbf{E} `ze' não é membro do Comunidade.UnB
 
 \textbf{E} `ze' é membro da sub-comunidade de Unb, FGA
 
 \textbf{Quando} eu navegar até a página `Gerenciar meus grupos'
 (/myprofile/ze/memberships)
 
-\textbf{Então} eu tenho que ver a comunidade UnB listada junto às
+\textbf{Então} eu tenho que ver o Comunidade.UnB listada junto às
 demais comunidades que faço parte.
 
 %---------------------------------cenário-------------------------------------%
-\item Ver comunidade `mãe' na página `Comunidades de ze'
+\item \underline{Ver comunidade `mãe' na página `Comunidades de ze'}
 
 \textbf{Dado} que eu estou logado com a usuário `ze'
 
-\textbf{E} `ze' não é membro da comunidade UnB
+\textbf{E} `ze' não é membro do Comunidade.UnB
 
 \textbf{E} `ze' é membro da sub-comunidade de Unb, FGA
 
 \textbf{Quando} eu navegar até a página `Comunidades de ze'
 (/profile/ze/communities)
 
-\textbf{Então} eu tenho que ver a comunidade UnB listada junto às
+\textbf{Então} eu tenho que ver o Comunidade.UnB listada junto às
 demais comunidades que faço parte.
 
 %cenários
 \end{enumerate}
 
 %--------------------------------história-------------------------------------%
-\item Bloco de organizações relacionadas
+\item \underline{Bloco de organizações relacionadas}
 
 Esta história de usuário está mapeada no ActionItem de número 2499\footnote{\url
 {https://noosfero.org/Development/ActionItem2499}}.
@@ -225,7 +273,7 @@ relacionadas à organização atual.
 \begin{enumerate}
 
 %---------------------------------cenário-------------------------------------%
-\item Adicionar um bloco de sub-organizações
+\item \underline{Adicionar um bloco de sub-organizações}
 
 \textbf{Dado} que eu estou logado com meu usuário
 
@@ -240,7 +288,7 @@ relacionadas à organização atual.
 \textbf{Então} eu tenho que ver a opção 'Organizações Relacionadas'.
 
 %---------------------------------cenário-------------------------------------%
-\item Listar todas as sub-organizações na organização `mãe'
+\item \underline{Listar todas as sub-organizações na organização `mãe'}
 
 \textbf{Dado} que eu estou logado com meu usuário
 
@@ -263,7 +311,7 @@ bloco
 bloco.
 
 %---------------------------------cenário-------------------------------------%
-\item Listar apenas as sub-comunidades organização `mãe'
+\item \underline{Listar apenas as sub-comunidades organização `mãe'}
 
 \textbf{Dado} que eu estou logado com meu usuário
 
@@ -288,7 +336,7 @@ bloco
 neste bloco.
 
 %---------------------------------cenário-------------------------------------%
-\item Visualizar página de sub-organizações de uma organização `mãe'
+\item \underline{Visualizar página de sub-organizações de uma organização `mãe'}
 
 \textbf{Dado} que eu estou logado com meu usuário
 
@@ -313,7 +361,7 @@ bloco
 neste bloco.
 
 %---------------------------------cenário-------------------------------------%
-\item Visualizar página de sub-comunidades de uma organização `mãe'
+\item \underline{Visualizar página de sub-comunidades de uma organização `mãe'}
 
 \textbf{Dado} que eu estou logado com meu usuário
 
@@ -340,7 +388,7 @@ bloco
 neste bloco.
 
 %---------------------------------cenário-------------------------------------%
-\item Listar todas as organizações `mãe' de uma organização
+\item \underline{Listar todas as organizações `mãe' de uma organização}
 
 \textbf{Dado} que eu estou logado com meu usuário
 
@@ -423,7 +471,7 @@ funcionalidade:
 %------------------------------funcionalidade---------------------------------%
 \subsection{\textit{Plugin} de bloco de video}
 
-Esta funcionalidade foi desenvolvido pela equipe de estagiários do Portal
+Esta funcionalidade foi desenvolvido pela equipe do Portal
 da FGA e está mapeada no ActionItem de número 2823\footnote{\url{https://
 noosfero.org/Development/ActionItem2823}} e consiste em um \textit{plugin}
 que adicionar um novo tipo de bloco no Noosfero, o VideoBlock.
@@ -540,7 +588,7 @@ funcionalidade:
 
 Implementar melhorias no Bloco ``Links'', para que fique muito mais intuitivo para um usuário personalizar o seu menu lateral. Incluindo;
 - Mover itens por meio de ``Drag and Drop''
-- Interface fácil de incluir links para conteúdo próprio
+- Interface fácil de incluir links para conteúdo próprio.
 
 Implementar melhorias no bloco ``links'' para aumentar a usabilidade:
   - Permitir reorganização de link via ``drag and drop''
@@ -589,54 +637,5 @@ no bloco de links padrão do perfil.
 
 \end{enumerate}
 
-%------------------------------funcionalidade---------------------------------%
-\subsection{Convite para participação de comunidades}
 
-Esta funcionalidade prevê melhorias no sistema de convite para participar de
-uma comunidade. Antes de sua implementação, os convites eram realizados
-exclusivamente através de e-mail, seja entrando com o e-mail da pessoa
-diretamente ou pesquisando na lista de contatos de um e-mail passado. Planejamos
-esta funcionalidade para incluir uma interface através da qual um usuário
-possa adicionar facilmente outros usuários da sua lista de amigos pesquisando
-pelo nome, ou, caso deseje convidar um usuário do qual não seja amigo, ou alguém
-que ainda não tenha cadastro na rede através do e-mail.
 
-\subsubsection*{Histórias de usuário}
-
-\begin{enumerate}
-
-%--------------------------------história-------------------------------------%
-\item Convidar usuários da rede
-
-\textbf{Para} facilitar a criação de convites para juntar-se a comunidade
-
-\textbf{Como} um membro de comunidade com permissão para convidar membros
-
-\textbf{Eu quero} convidar usuários através de uma interface que busque na lista
-de perfis de pessoas do ambiente e auto-complete conforme for digitando.
-
-\subsubsection*{Cenários de uso}
-
-\begin{enumerate}
-
-\item Procurar um usuário cadastrado
-
-\textbf{Dado} que eu estou logado com meu usuário
-
-\textbf{E} meu usuário é administrador da comunidade UnB
-
-\textbf{E} o usuário `Zé' existe
-
-\textbf{E} o usuário `Zé' não é membro da comunidade UnB
-
-\textbf{E} eu estou na página de convidar amigos para a comunidade UnB
-
-\textbf{Quando} eu digitar `Zé' no campo de convidar novos amigos
-
-\textbf{Então} eu devo ver um \textit{token}\footnote{Neste contexto, um
-\textit{token} representa um objeto, no caso um perfil de usuário, que possua
-um nome que bata com o campo digitado.} representando o usuário `Zé'.
-
-\end{enumerate}
-
-\end{enumerate}
