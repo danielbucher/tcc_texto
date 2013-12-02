@@ -168,7 +168,7 @@ uma evolução do \textit{Test Driven Development} (TDD)%
 apresentada por \citeonline{north2006} como veremos na seção
 \ref{funcionalidades}.
 %
-As semelhanças das práticas adotas pelas comunidades de software livre e as
+As semelhanças das práticas adotadas pelas comunidades de software livre e as
 comunidades de métodos ágeis foram apresentadas por \citeonline{corbucci2011}
 em sua tese de mestrado. De acordo com ele, os dois
 métodos possuem tantas características em comum ao ponto de Martin Fowler
@@ -176,6 +176,10 @@ incluir software livre como um método ágil na primeira versão de seu artigo
 \textit{"The New Methodology"}. No entanto o mesmo foi retirado devido
 à falta de descrição precisa dos métodos de desenvolvimento utilizados pelas
 comunidades de software livre \apud[p.~9]{fowler2000}{corbucci2011}.
+
+%-----------------------------------------------------------------------------%
+
+\input{capitulos/capitulo4/funcionalidades}
 
 %------------------------------------------------------------------------------%
 
@@ -205,32 +209,42 @@ hospedar o sistema. No entanto, essa estimativa foi realizada com base em
 depoimentos de usuários destas tecnologias e faz-se necessária a execução de
 um \textit{benchmark} mais específico para podermos definir estes parâmetros com
 uma precisão maior.
+%TODO referenciar seção sobre trabalhos futuros
+Na seção \ref{trabalhos-futuros} propomos um estudo sobre escalabilidade para
+aplicações desenvolvidas em \textit{Ruby on Rails} e a possibilidade de se
+utilizar mais de uma máquina hospedeira para tanto.
 
-Quanto à questão de segurança de acesso, o ideal é que a autenticação seja
-realizada através de um serviço ou uma base de dados disponibilizada pelo CPD
-(Centro de Informática) e que seja utilizada uma camada de SSL/TLS (Secure Socket
-Layer e Transport Layer Security) através do protocolo HTTPS (Hypertext Transfer
-Protocol Secure) para acesso à Comunidade UnB. As permissões de acesso das
+%TODO adquirir certificado SSL em trabalhos futuros
+No quesito segurança, é importante que as requisições que chegam ao serviço
+do Comunidade.UnB passem por uma camada de criptografia para impedir que
+eventuais ataques consigam recuperar dados como a senha do usuário. Assim faz-se
+necessário a adição de uma camada de \textit{Secure Socket Layer/Transport
+Layer security} (SSL)/TLS através do protocolo \textit{Hypertext Transfer
+Protocol Secure} (HTTPS) para acesso à Comunidade UnB. As permissões de acesso das
 comunidades e seu conteúdo podem ser configuradas através do painel de controle
-das mesmas. Atualmente estamos investigando a possibilidade de utilizarmos a
-base de dados o MatriculaWeb
-~\footnote{\url{https://matriculaweb.unb.br/matriculaweb/}}, serviço de matrícula
-da UnB para autenticar no sistema. Outra possibilidade seria utilizar as bases
-de dados das diversas instâncias de Moodle existente na Universidade.
+das mesmas. Esta é uma preocupação já bastante discutida na comunidade do
+Noosfero e no momento da escrita deste texto esta estava implementando algumas
+alterações para adequar o Noosfero ao uso de SSL. Será necessário adquirir um
+certificado válido para utilização de SSL no Comunidade.UnB.
 
-Outro aspecto importante que devemos levar em consideração é a adequação da
-Comunidade Unb ao padrão de identidade visual da UnB.
+\begin{figure}[h]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.4]
+	  {figuras/comunidade.unb.br.eps}
+	\caption{Página inicial da Comunidade.UnB}
+	\label{comunidade-unb}
+\end{figure}
+
+Outro aspecto importante que levamos em consideração é a adequação da
+Comunidade.Unb ao padrão de identidade visual da UnB.
 A identidade visual da rede foi adaptada em cima do tema~\footnote{Temas são
 compostos por aquivos de \textit{layout}, em rhtml e CSS, que definem os aspectos
 visuais de uma instância do Noosfero. Os temas podem ser alterados pela interface
 administrativa da instância.} do Stoa, que é disponibilizada em um repositório
-público, para se enquadrar no padrão da UnB.
+público, para se enquadrar no padrão da UnB e está disponível em um repositório
+no \textit{Github}~\footnote{\url{https://github.com/fga-unb/comunidade-unb-theme}}.
 %
 O \textit{layout} atual utiliza predominantemente as duas cores-padrão definidas
 no Manual de Identidade Visual da Universidade\cite{visualUnB}, o Azul UnB
-(Pantone 654) e o Verde UnB (Pantone 348). Na Figura \ref{comunidade-unb}
-podemos ver uma versão temporária do \textit{layout} desenvolvida por nós.
-
-%-----------------------------------------------------------------------------%
-
-\input{capitulos/capitulo4/funcionalidades}
+(Pantone 654) e o Verde UnB (Pantone 348). A Figura \ref{comunidade-unb}
+apresenta a página inicial da Comunidade.UnB com o tema desenvolvido.
