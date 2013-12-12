@@ -72,8 +72,8 @@ redução de custos e na diminuição na duplicação de esforços, tirando prov
 característica abstrata do software.
 
 Outra vantagem resultante do compartilhamento do código se refere
-à possível melhoria na qualidade \cite{CatedralBazzar}, em particular frente aos
-problemas inerentes à sua complexidade.
+à possível melhoria na qualidade, em particular frente aos
+problemas inerentes à sua complexidade \cite{CatedralBazzar}.
 %
 Isso se deve ao maior número de desenvolvedores e usuários envolvidos
 com o software. Em outras palavras, um número maior de desenvolvedores, com diferentes
@@ -100,18 +100,18 @@ própria rede social personalizada, livre e autônoma.
 %
 As principais funcionalidades do Noosfero incluem:
 
-\begin{itemize}
+\begin{enumerate}
 
-\item Rede Social (três entidades: pessoas, comunidades e organizações);
-\item CMS: pastas, artigos, RSS, \textit{upload} e publicação de imagens e
-arquivos;
-\item \textit{Blog} com sistema de notificação de comentários;
-\item Fórum de discussões;
-\item Galeria de imagens;
+\item \label{noosfero-social} Rede Social (três entidades: pessoas, comunidades
+e organizações);
+\item \label{noosfero-cms} CMS: pastas, artigos, RSS, \textit{upload} e
+publicação de imagens e arquivos;
+\item \label{noosfero-blog} \textit{Blog} com sistema de notificação de comentários;
+\item \label{noosfero-forum} Fórum de discussões;
+\item \label{noosfero-gallery} Galeria de imagens;
 \item Agenda de eventos compartilhadas;
-\item e-Portfolios (individuais \& de grupos);
 
-\end{itemize}
+\end{enumerate}
 
 %------------------------------------------------------------------------------%
 
@@ -158,9 +158,9 @@ redes sociais sejam desenvolvidos como \textit{plugins}, assim diminuindo
 o acoplamento e aumentando a coesão dos diversos módulos do sistema.
 %
 Uma das grandes vantagens em se criar uma aplicação com arquitetura extensível
-é o fato de que o desenvolvedor pode criar um \textit{plugins}
-sem precisar modificar o código fonte da ferramenta, além de tornar mais
-fácil o isolamento de \textit{bugs} encontrados. 
+é a possibilidade de criar \textit{plugins} sem precisar modificar o código
+fonte do núcleo da ferramenta, além de permitir o isolamento de
+\textit{bugs} encontrados mais facilmente. 
 
 \begin{figure}[h]
 	\centering
@@ -177,18 +177,18 @@ outros \textit{plugins} além de manter o padrão de qualidade de código. A
 Figura \ref{plugins} apresenta a arquitetura expansível do Noosfero.
 
 Essa abordagem arquitetural é muito benéfica para a diversidade de contextos
-em que o Noosfero pode ser implantado. Diversidade esta que pode ser evidenciada
+em que o Noosfero pode ser utilizado. Diversidade esta que pode ser evidenciada
 quando se observa a existência de uma rede como o Cirandas
 ~\footnote{\url{https://cirandas.net/}}
 , uma rede social com o propósito de promover economia solidária através
 da troca e venda de produtos e serviços, e o
 Stoa, um ambiente virtual para a disseminação de conhecimento em âmbito
 acadêmico de forma colaborativa, ambos desenvolvidos utilizando o Noosfero.
+%
 Dessa forma, os dois ambientes compartilham um núcleo comum às redes sociais
 no geral, mas diferem no uso de \textit{plugins} com funcionalidades próprias
-às suas necessidades específicas. Na seção \ref{requisitos}, apresentamos
-algumas funcionalidades que serão desenvolvidas no formato de um \textit{plugin},
-Comunidade-UnB.
+às suas necessidades específicas. Na seção \ref{funcionalidades}, apresentamos
+algumas funcionalidades que serão desenvolvidas no formato de \textit{plugins}.
 
 
 %------------------------------------------------------------------------------%
@@ -239,8 +239,67 @@ do núcleo do Noosfero. Vale a pena ressaltar alguns componentes desta arquitetu
 	
 \end{itemize}
 
+%------------------------------------------------------------------------------%
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.65]
+	  {figuras/domain_main.eps}
+	\caption{Entidades de domínio: relação entre ambientes, domínios e perfis.}
+	\label{domain_main}
+\end{figure}
 
+O Noosfero é uma plataforma multi-ambiente, o que significa que se pode ter duas
+redes sociais distintas, com domínios, usuários e comunidades distintas em uma
+mesma instalação conforme ilustrado na Figura \ref{domain_main}.
+%
+A entidade \textbf{\textit{Profile}}, em português \textbf{Perfil}, é uma
+abstração das três formas de entidades concretas de perfil existentes no
+Noosfero: \textbf{pessoa}, \textbf{comunidade} e \textbf{empreendimento}
+(em inglês: \textbf{\textit{person}}, \textbf{\textit{community}} e
+\textbf{\textit{enterprise}}).
+%
+Ou seja, as três entidades possuem características em comum e são tratadas
+como uma só em determinados contextos dentro da aplicação. Existe ainda
+outra entidade que abstraí o comportamento comum à \textbf{comunidades}
+e \textbf{empreendimentos} chamada de \textbf{organização} (em inglês,
+\textbf{\textit{organization}}).
+%
+A Figura \ref{domain_profiles} apresenta a relação entre os tipos de perfil.
+A seta com a cabeça triangular representa uma relação de herança~\footnote{%
+\url{http://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)}}
+entre as classes que representam as entidades de domínio.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.6]
+	  {figuras/domain_profiles.eps}
+	\caption{Entidades de domínio: tipos de perfis.}
+	\label{domain_profiles}
+\end{figure}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.55]
+	  {figuras/domain_articles.eps}
+	\caption{Entidades de domínio: tipos de artigos.}
+	\label{domain_articles}
+\end{figure}
 
+Existe ainda a entidade \textbf{\textit{User}}, ou \textbf{Usuário}, que é
+mantida separada da entidade \textbf{Pessoa} por questões de \textit{design}
+do código da aplicação, que é quem implementa a lógica de autenticação da
+aplicação. Desta forma a lógica de autenticação fica separada da lógica de
+visualização e customização do perfil.
+%
+Podemos perceber então que a Figura \ref{domain_profiles} representa as
+entidades de domínio ligadas à funcionalidade mencionada no item
+\ref{noosfero-social}.
+
+As entidades mostradas na Figura \ref{domain_articles} representam os
+principais tipos de conteúdos disponíveis no Noosfero, \textbf{artigos
+de texto}, \textbf{pastas}, \textbf{blogs}, \textbf{galerias de imagens},
+\textbf{arquivos} e \textbf{\textit{feeds} de notícias}, assim como a
+relação de herança entre estes. São as entidades envolvidas nas
+funcionalidades dos itens \ref{noosfero-cms}, \ref{noosfero-blog},
+\ref{noosfero-forum} e \ref{noosfero-gallery}.
