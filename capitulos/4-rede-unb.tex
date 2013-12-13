@@ -76,46 +76,50 @@ ferramentas que facilitem e incentivem a entrada de novas pessoas.
 \citeonline{reis2003} identificou que 65\% dos projetos de software livre
 utilizam ferramentas de controle de versão, listas de correio eletrônico e a
 página do projeto na internet como ferramenta de comunicação entre usuários e
-desenvolvedores. Em 2011, uma pesquisa realizada por \citeonline{corbucci2011}
-para sua dissertação de mestrado identificou listas de correio eletrônico como
-sendo a ferramenta de comunicação mais comum em projetos de software livre
-seguido pelo Internet Relay Chat (IRC).
+desenvolvedores. Hoje, dez anos depois desse levantamento, podemos ter em mente
+que esse percentual seja bem maior.
 %
-A comunidade do Noosfero faz uso de todas as ferramentas citadas acima com
-objetivo de minimizar  os problemas de comunicação ocasionados pelo fato da
-equipe estar distribuída por todo o país com alguns membros até mesmo fora do
-país além de possibilitar que novos membros da comunidade, sejam eles
-desenvolvedores ou usuários, possam se integrar do que está ocorrendo no
-projeto e interagir com os demais membros.
+Em 2011, uma pesquisa, realizada por \citeonline{corbucci2011}
+para sua dissertação de mestrado, identificou listas de correio eletrônico como
+sendo a ferramenta de comunicação mais comum em projetos de software livre
+seguido pelo \textit{Internet Relay Chat} (IRC).
+%
+A comunidade do Noosfero faz uso de todas as ferramentas citadas acima, com
+o objetivo de minimizar os problemas de comunicação ocasionados pelo fato da
+equipe estar distribuída ao redor do mundo, bem como, possibilitar que novos
+membros da comunidade, sejam eles desenvolvedores ou usuários, possam se
+integrar do que está ocorrendo no projeto e interagir com os demais membros.
 
 As lista de correio eletrônico
 ~\footnote{\url{https://noosfero.org/Development/MailingLists\#Development}}
-(são duas, uma para português e outra para inglês) são a principal ferramenta
-de comunicação. 
+(são duas: uma em português, para comunidade brasileira, e outra em inglês,
+para os desenvolvedores com um todo, brasileiros ou não) é a principal
+ferramenta de comunicação. 
 %
-Além disso a comunidade mantém um canal no IRC~\footnote{Os canais \#noosfero e
-\#noosfero-br hospedados no freenode até o momento da escrita deste texto.}
+Além disso, a comunidade mantém um canal no IRC~\footnote{Os canais \#noosfero e
+\#noosfero-br hospedados no FreeNode até o momento da escrita deste texto.}
 para tirar dúvidas e proporcionar um canal de comunicação mais dinâmica.
 %
 Outra iniciativa recente da comunidade para melhorar a comunicação e manter os
 diversos núcleos de desenvolvimentos do Noosfero a par das últimas atualizações
-é a de realizar quinzenalmente reuniões via video-conferência.
+é a de realizar quinzenalmente reuniões via vídeo-conferência.
 
 A página do Noosfero~\footnote{\url{http://noosfero.org}} possui uma seção de
 desenvolvimento~\footnote{\url{http://noosfero.org/Development}} que apresenta
 informações necessárias para pessoas que queiram começar a colaborar com o
-mesmo. Nesta página encontramos também um \textit{issue tracker} utilizado para
-cadastrar e controlar as funcionalidades e \textit{bugs} do Noosfero.
+mesmo. Nessa página, encontramos também um \textit{issue tracker} utilizado para
+cadastrar e mapear o desenvolvimento das funcionalidades e correções de
+\textit{bugs} do Noosfero.
 %
 São disponibilizados dois \textit{issue trackers} diferentes, um para
 funcionalidades e outro para \textit{bugs}. Ao cadastrar um novo item, o
-desenvolvedor preenche os campos com o título daquele item, uma ou mais
-categorias para aquele item (e.g. Chat, RSSFeeds), a descrição daquele
-item, o \textit{plugin} relacionado aquele item, quando existir, e a
+desenvolvedor preenche os campos com o título daquele item; uma ou mais
+categorias para aquele item (e.g. Chat, RSSFeeds); a descrição daquele
+item; o \textit{plugin} relacionado aquele item, quando existir; e a
 versão do Noosfero que aquele item afeta.
 %
 Para funcionalidades, coloca-se a
-versão em que esta está prevista para ser lançada, enquanto que para
+versão em que essa está prevista para ser lançada, enquanto que para
 \textit{bugs}, coloca-se também a versão em que este foi identificado. Com o
 item criado, outro usuários podem adicionar comentários e associar um
 desenvolvedor responsável pela sua implementação.
@@ -134,7 +138,7 @@ funcionalidades do Noosfero.
 A pessoa que queira cadastrar novos itens nestes precisa se cadastrar
 na página de desenvolvimento do Noosfero.
 %
-Recentemente foi implementado um sistema que possibilita à comunidade declarar
+Recentemente, foi implementado um sistema que possibilita à comunidade declarar
 seu interesse em ver um item resolvido, dessa forma é possível priorizar os
 itens identificados como sendo de maior importância para os usuários e
 desenvolvedores.
@@ -148,8 +152,8 @@ Github~\footnote{\url{https://github.com/noosfero/noosfero}}.
 %
 Na página de desenvolvimento da comunidade existe uma série de recomendações
 sobre como enviar \textit{patches} para o Noosfero%
-~\footnote{\url{https://noosfero.org/Development/PatchGuidelines}}
-, desde como versionar seu \textit{patches} até como realizar a solicitação de
+~\footnote{\url{https://noosfero.org/Development/PatchGuidelines}},
+desde como versionar seu \textit{patches}, até como realizar a solicitação de
 inclusão do seu \textit{patch}, ou \textit{merge-request}, na plataforma.
 
 O processo de colaboração com o Noosfero incluí uma série práticas apresentadas
@@ -160,17 +164,39 @@ histórias de usuário e a adoção de ferramentas para a utilização da metodo
 ~\footnote{\url{http://en.wikipedia.org/wiki/Behavior-driven_development}},
 uma evolução do \textit{Test Driven Development} (TDD)%
 ~\footnote{\url{http://en.wikipedia.org/wiki/Test-driven_development}}
-apresentada por \citeonline{north2006}, como veremos na seção
+apresentada por \citeonline{north2006}, como veremos na Seção
 \ref{funcionalidades}.
 %
 As semelhanças das práticas adotadas pelas comunidades de software livre e as
 comunidades de métodos ágeis foram apresentadas por \citeonline{corbucci2011}
 em sua tese de mestrado. De acordo com ele, os dois
-métodos possuem tantas características em comum ao ponto de Martin Fowler
+métodos possuem tantas características em comum ao ponto de, Martin Fowler,
+um dos autores mais influentes na Literatura sobre métodos ágeis,
 incluir software livre como um método ágil na primeira versão de seu artigo
 \textit{"The New Methodology"}. No entanto o mesmo foi retirado devido
 à falta de descrição precisa dos métodos de desenvolvimento utilizados pelas
 comunidades de software livre \apud[p.~9]{fowler2000}{corbucci2011}.
+%
+Por outro lado, \citeonline{corbucci2011} discute os princípios ágeis e livres
+como semelhantes:
+%
+(i) Indivíduos e interações são mais importantes que processos e ferramentas;
+(ii) Software em funcionamento é mais importante que documentação abrangente;
+(iii) Colaboração com o cliente (usuários) é mais importante que negociação de
+contratos;
+(iv) Responder às mudanças é mais importante que seguir um plano.
+%
+Também, explicita as práticas disseminadas pelas metodologias ágeis usadas no
+cotidiano dos desenvolvedores de software livre:
+(i) Código compartilhado (coletivo);
+(ii) Projeto simples;
+(iii) Repositório único de código;
+(iv) Integração contínua;
+(v) Código e teste;
+(vi) Desenvolvimento dirigido por testes, e
+(vii) Refatoração~\cite{corbucci2011}. Portanto, neste trabalho, entendemos
+software livre com um método ágil de desenvolvimento, do ponto de vista da
+Engenharia de Software.
 
 %-----------------------------------------------------------------------------%
 
