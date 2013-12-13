@@ -1,17 +1,16 @@
 \chapter{Uma Rede de Colaboração para a UnB}
 
-Como dito anteriormente, o objetivo deste trabalho é disponibilizar um ambiente
+Como já exposto, o objetivo deste trabalho é disponibilizar um ambiente
 virtual no qual alunos, professores e servidores técnico-administrativos tenham 
 um espaço para a criação e o compartilhamento de conhecimento na forma de uma
-rede de colaboração livre para a Universidade de Brasília.
+rede de colaboração livre para a Universidade de Brasília: o Comunidade.UnB.
 %
-Para isto, escolhemos utilizar a plataforma Noosfero por entender que
-as funcionalidades de rede social e de CMS satisfazem nossas necessidades, além
-das vantagens existentes por este ser uma plataforma de software
-livre expansível (através de \textit{plugins}), por ter uma comunidade
+Para isto, escolhemos a plataforma Noosfero por entender que
+(i) as funcionalidades de rede social e de CMS satisfazem nossas necessidades;
+(ii) além das vantagens existentes por este ser uma plataforma de software
+livre; (iii) por ser  expansível (através de \textit{plugins}); (iv) por ter uma comunidade
 ativa e pela posição geográfica favorável que possuímos em relação ao núcleo de
-desenvolvimento desta, a Colivre, que é uma cooperativa brasileira com sede na
-Bahia.
+desenvolvimento dela, que está no Brasil.
 %
 Desta forma, conseguimos facilmente contactar os principais desenvolvedores
 do Noosfero e organizar encontros para discutir parcerias, como ocorrido
@@ -21,55 +20,51 @@ Além de um ambiente virtual para interação social, queremos que a rede propos
 funcione como um ambiente para os alunos, professores e funcionários da
 universidade compartilhar ideias, produzir conteúdo de forma colaborativa e
 publicá-lo para que possa ser de utilidade para outras pessoas ou parcelas da
-sociedade, uma vez que entendemos ser este um dos papéis de uma Universidade.
+sociedade, uma vez que entendemos (e defendemos) ser este um dos papéis de uma Universidade:
+universalizar o conhecimento.
 %
 O ambiente disponibiliza para seus usuários a capacidade de criar blogs,
 comunidades, de se relacionar com outras pessoas e ao mesmo tempo associar seu
 perfil à marca da Universidade de Brasília.
 
-%TODO referenciar seção que fala sobre construtivismo...
-Alternativamente, o Comunidade.UnB pode ser utilizado como ferramenta
-complementar de ensino, semelhante ao que foi visto em \ref{subsec:tecciencia}.
-%
-Desta forma comunidades poderiam ser utilizadas para construir e publicar
+As comunidades no Comunidade.UnB podem ser utilizadas para construir e publicar
 conteúdo de áreas de conhecimento, disciplinas e projetos acadêmicos de forma
-colaborativa continuamente ao longo do tempo. Dentre as vantagens dessa
-abordagem podemos destacar a possibilidade de acesso do público ao conteúdo, e a
-persistência do conteúdo desenvolvido para as comunidades. O Noosfero permite
-configurar a publicidade do conteúdo de suas comunidades de forma a decidir
-quais conteúdos serão expostos ao público e quais seriam mantidos privados.
+colaborativa, como ocorreu, em nossos estudos de caso, em 3 disciplinas da UnB Gama.
 %
-Atualmente existe também um \textit{plugin} para submissão de trabalhos
-~\footnote{\url{https://gitorious.org/noosfero/noosfero/source/%
-223c8d39273d59e472a5660a37f7a1b8f7441ff9:plugins/work_assignment}
-Acessado em Novembro de 2013} que permite ao professor receber trabalhos diretamente
-na rede.
-
-No entanto, conforme colocado no capítulo \ref{cap:midias-sociais}, não está
-no escopo deste trabalho discutir as vantagens e desvantagens de um processo
-educacional horizontal diferente do modelo vertical adotado atualmente no qual
-a informação parte do professor e o aluno atua como um receptor do conhecimento.
+Dentre as vantagens dessa abordagem podemos destacar a possibilidade de
+acesso do público ao conteúdo, e a continuidade do conteúdo desenvolvido
+nas comunidades para outras pessoas que eventualmente se juntem ao longo do tempo.
+%
+Entretanto, o Noosfero permite configurar a publicação do conteúdo de suas comunidades, de forma a decidir
+quais conteúdos serão expostos ao público e quais seriam mantidos privados.
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.4]
-	  {figuras/portal-fga.eps}
-	\caption{Ambiente Noosfero como portal da Faculdade do Gama}
-	\label{portal-fga}
+    \centering
+    \includegraphics[keepaspectratio=true,scale=0.4]
+      {figuras/portal-fga.eps}
+    \caption{Ambiente Noosfero como portal da Faculdade do Gama}
+    \label{portal-fga}
 \end{figure}
 
 O Noosfero permite também fazer uso de suas funcionalidades de CMS para a
 criação de portais institucionais para faculdades, departamentos, laboratórios,
 dentre outros. A Figura \ref{portal-fga} apresenta o uso de um ambiente
-Noosfero como portal para a Faculdade do Gama (FGA). Assim poderíamos ter
-comunidades dentro do Comunidade.UnB com temas próprios que funcionariam
-como portais institucionais.
+Noosfero como portal para a Faculdade UnB Gama (FGA), que também recebeu
+colaborações durante este trabalho, desde o desenvolvimento de funcionalidades com a equipe,
+passando pelo treinamento da mesmo, até a revisão de código de contribuições da mesma.
+%
+No contexto do Portal da FGA, podemos ter comunidades dentro do
+Comunidade.UnB com temas próprios que funcionariam como portais institucionais.
+%
+Em outras palavras, dependendo do o que for planejado para o Comunidade.UnB, o
+Portal da FGA pode, no futuro ser, na prática, uma comunidade dentro do Comunidade.UnB,
+com os seus respectivos sub-grupos.
 
 Nesse capítulo apresentaremos as funcionalidades desenvolvidas para contribuir
 para a adequação do Noosfero como uma rede de colaboração para universidades,
 os requisitos não-funcionais levantados para que esta possa suprir as
 necessidades de segurança e confiabilidade e o processo de colaboração com o
-Noosfero. O capítulo \ref{cap:conclusao} apresenta outras funcionalidades que
+Noosfero. O capítulo \ref{cap:conclusao}, na seção de trabalhos futuros, apresenta outras funcionalidades que
 foram levantadas por nós mas não foram desenvolvidas ao longo deste trabalho.
 
 %------------------------------------------------------------------------------%
@@ -126,11 +121,11 @@ item criado, outro usuários podem adicionar comentários e associar um
 desenvolvedor responsável pela sua implementação.
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.4]
-	  {figuras/issue-tracker.eps}
-	\caption{Issue Tracker do Noosfero}
-	\label{issue-tracker}
+    \centering
+    \includegraphics[keepaspectratio=true,scale=0.4]
+      {figuras/issue-tracker.eps}
+    \caption{Issue Tracker do Noosfero}
+    \label{issue-tracker}
 \end{figure}
 
 A Figura \ref{issue-tracker} apresenta o \textit{issue tracker} para
@@ -228,11 +223,11 @@ alterações para adequar o Noosfero ao uso de SSL. Será necessário adquirir u
 certificado válido para utilização de SSL no Comunidade.UnB.
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.4]
-	  {figuras/comunidade.unb.br.eps}
-	\caption{Página inicial da Comunidade.UnB}
-	\label{comunidade-unb}
+    \centering
+    \includegraphics[keepaspectratio=true,scale=0.4]
+      {figuras/comunidade.unb.br.eps}
+    \caption{Página inicial da Comunidade.UnB}
+    \label{comunidade-unb}
 \end{figure}
 
 Outro aspecto importante que levamos em consideração é a adequação da
