@@ -13,14 +13,23 @@ Nos preocupamos em contribuir, na prática, com a escrita de código~\footnote{%
 Segue o link de alguns \textit{commits} realizado por nós durante a realização
 deste trabalho: \\
 \url{https://gitorious.org/noosfero/danielbucher-noosfero/commit/09c1af056d800c0f67632360734004b5c7090b7e}\\
-\url{https://gitorious.org/noosfero/danielbucher-noosfero/commit/31298c57b1725da6fdc1b96744cecf232897d80f}}
-, uma vez que, em nossa visão, esta é a principal missão de um Engenheiro de
+\url{https://gitorious.org/noosfero/danielbucher-noosfero/commit/31298c57b1725da6fdc1b96744cecf232897d80f}},
+uma vez que, em nossa visão, esta é a principal missão de um Engenheiro de
 Software.
 %
 Outra atividade que julgamos ser de fundamental importância para a continuidade
 deste trabalho, diz respeito ao repasse do conhecimento adquirido para uma
 equipe de alunos do curso de Engenharia de Software, que trabalhou inicialmente
 no Portal da FGA.
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.45]
+	  {figuras/comunidade-unb.eps}
+	\caption{Tela inicial da Comunidade.UnB}
+	\label{homepage:comunidade.unb}
+\end{figure}
 
 Esta experiência nos proporcionou a possibilidade de participar de um processo
 distribuído de desenvolvimento de software com outras equipes espalhadas pelo
@@ -31,27 +40,20 @@ da capacidade de ser lançada oficialmente para a universidade, graças ao
 apoio do CDTC, que viabilizou os contatos necessários para formalizar os
 pedidos de uso, por exemplo, das bases de dados existentes nela, e graças
 à comunidade do Noosfero que nos apoiou durante sua execução.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.45]
-	  {figuras/comunidade-unb.eps}
-	\caption{Tela inicial da Comunidade.UnB}
-	\label{homepage:comunidade.unb}
-\end{figure}
-
-A figura \ref{homepage:comunidade.unb} apresenta a página inicial do
+%
+Por fim, a Figura \ref{homepage:comunidade.unb} apresenta a página inicial do
 Comunidade.UnB, ainda em ambiente de testes, que já consta com 153 usuários
 e 14 comunidades.
 
 %TODO compra de certificado
 \section{Trabalhos Futuros}
 
-Nessa seção, apresentamos um levantamento sobre alguns protocolos que
-podem ser usados para implementar a federação tecnológica para o Noosfero, e
-um propomos um estudo sobre escalabilidade, de forma a conseguir atender
-um número de requisições concorrentes elevados e manter um bom nível de
-desempenho.
+Nessa seção, apresentamos alguns trabalhos futuros que podem dar continuidade a
+este trabalho. Além de algumas novas funcionalidades para o Noosfero, fizemos
+um levantamento sobre alguns protocolos que podem ser usados para implementar a
+federação tecnológica para o Noosfero, bem como propomos um estudo sobre
+escalabilidade, de forma a conseguir atender um número de requisições
+concorrentes elevados para manter um bom nível de desempenho.
 
 \subsection{Federação Tecnológica}
 
@@ -95,16 +97,16 @@ protocolo para a federação chamado \textbf{Activity Streams}%
 ~\footnote{\url{http://activitystrea.ms/}} baseado em \textbf{\textit{%
 JavaScript Object Notation}} (\textbf{JSON}).
 %
-No entanto, faz-se necessário realizar uma série de estudos e experimentos
+Assim, faz-se necessário realizar uma série de estudos e experimentos
 antes de tomar a decisão do protocolo a ser adotado, ou mesmo desenvolvido
 do início.
 
 Quando a federação tecnológica for uma realidade no Noosfero, existirá a
 possibilidade de existir uma ``rede de redes'' de colaboração federadas,
-com vários universidades tendo sua própria rede de colaboração com sendo
-um nó.
+com várias universidades, por exemplo, tendo sua própria rede de colaboração
+com sendo um nó.
 %
-Esta realidade aumentaria consideravelmente o número de requisições sendo
+Essa realidade aumentaria consideravelmente o número de requisições sendo
 feitas a uma instância do Noosfero em uma universidade, uma vez que o público
 fazendo uso desta tecnologia tende a se multiplicar.
 %
@@ -115,25 +117,22 @@ responsável por atuar como um servidor de \textit{proxy} reverso.
 
 %-----------------------------------------------------------------------------%
 
-\section{Próximas funcionalidades}
-
-Esta seção apresenta algumas funcionalidades que foram levantadas por nós, mas
-que devido às limitações de tempo e recurso não couberam neste trabalho.
+\subsection{Próximas funcionalidades}
 
 %------------------------------funcionalidade---------------------------------%
-\subsection{Convite para participação de comunidades}
+\subsubsection{Convite para participação de comunidades}
 
 Esta funcionalidade prevê melhorias no sistema de convite para participar de
-uma comunidade. Antes de sua implementação, os convites eram realizados
+uma comunidade. Hoje, os convites são realizados
 exclusivamente através de e-mail, seja entrando com o e-mail da pessoa
 diretamente ou pesquisando na lista de contatos de um e-mail passado.
 %
 Planejamos esta funcionalidade para incluir uma interface através da qual um
-usuário possa adicionar facilmente outros usuários da sua lista de amigos pesquisando
-pelo nome, ou, caso deseje convidar um usuário do qual não seja amigo, ou alguém
-que ainda não tenha cadastro na rede através do e-mail.
+usuário possa adicionar facilmente outros usuários da sua lista de amigos,
+pesquisando pelo nome, ou, caso deseje convidar um usuário do qual não seja
+amigo, ou alguém que ainda não tenha cadastro na rede através do e-mail.
 
-\subsubsection*{Histórias de usuário}
+\subsubsubsection*{Histórias de usuário}
 
 \begin{enumerate}
 
@@ -147,7 +146,7 @@ que ainda não tenha cadastro na rede através do e-mail.
 	\textbf{Eu quero} convidar usuários através de uma interface que busque na lista
 	de perfis de pessoas do ambiente e auto-complete conforme for digitando.
 
-\subsubsection*{Cenários de uso}
+\subsubsubsection*{Cenários de uso}
 
 	\begin{enumerate}
 
@@ -157,17 +156,17 @@ que ainda não tenha cadastro na rede através do e-mail.
 
 		\textbf{E} meu usuário é administrador do Comunidade.UnB
 
-		\textbf{E} o usuário `Zé' existe
+		\textbf{E} o usuário ``Zé'' existe
 
-		\textbf{E} o usuário `Zé' não é membro do Comunidade.UnB
+		\textbf{E} o usuário ``Zé'' não é membro do Comunidade.UnB
 
 		\textbf{E} eu estou na página de convidar amigos para o Comunidade.UnB
 
-		\textbf{Quando} eu digitar `Zé' no campo de convidar novos amigos
+		\textbf{Quando} eu digitar ``Zé'' no campo de convidar novos amigos
 
 		\textbf{Então} eu devo ver um \textit{token}\footnote{Neste contexto, um
 		\textit{token} representa um objeto, no caso um perfil de usuário, que possua
-		um nome que bata com o campo digitado.} representando o usuário `Zé'.
+		um nome que bata com o campo digitado.} representando o usuário ``Zé''.
 
 	\end{enumerate}
 
@@ -176,9 +175,9 @@ que ainda não tenha cadastro na rede através do e-mail.
 
 %------------------------------funcionalidade---------------------------------%
 
-\subsection{Utilização de SSL}
+\subsubsection{Utilização de SSL}
 
-Esta `funcionalidade'~\footnote{Colocamos funcionalidade entre parenteses pelo
+Esta ``funcionalidade''~\footnote{Colocamos funcionalidade entre aspas pelo
 fato de esta não ser composta de histórias de usuários, como as demais, mas sim
 de histórias técnicas que precisam ser desenvolvidas para atender a requisitos
 não funcionais mencionados na Seção \ref{sec:non-functional-req}.} diz respeito
@@ -189,14 +188,14 @@ dos usuários, como suas senhas, que as requisições realizadas para o
 Comunidade.UnB passem uma uma camada de criptografia, conforme mencionado em
 \ref{sec:non-functional-req}.
 %
-Para tanto, já foi proposto na lista de correio eletrônico do Noosfero a
+Para tanto, já foi proposto na lista de discussão do Noosfero a
 utilização da ferramenta \textbf{Pound}~\footnote{\url{http://www.apsis.ch/pound}}
 para atuar como um \textit{front-end} de HTTPS para o \textbf{Apache}.
 %
-No entanto seria necessário a aquisição de um certificado SSL~\footnote{\url{%
+No entanto, seria necessário a aquisição de um certificado SSL~\footnote{\url{%
 http://en.wikipedia.org/wiki/Transport_Layer_Security}} que fosse suportado
 pelos navegadores mais utilizados.
-
+%
 A história apresentada nesta sub-seção é descrita como uma história técnica ao
 invés de uma história de usuário, uma vez que o objetivo desta é atender a
 um requisito não-funcional do sistema.
@@ -220,7 +219,11 @@ HTTPS.
 \end{enumerate}
 
 Existem várias outras funcionalidades e melhorias (por exemplo, melhorias de
-usabilidade e melhorias no fórum do Noosfero) que podem ser propostas para
-o Noosfero, no entanto, as funcionalidades propostas aqui já possibilitam que
-seja realizado o lançamento e a disponibilização do Comunidade.UnB para o
-público da Universidade em 2014.
+usabilidade e melhorias no fórum do Noosfero) que estão listadas no
+\textit{issue tracker} do Noosfero, ou ainda que podem ser propostas para
+a comunidade do Noosfero, bem como para a equipe do Portal da FGA que manterá
+o Comunidade.UnB.
+%
+Entretanto, as funcionalidades já existentes no Noosfero, o que inclui as que
+fizemos neste trabalho, possibilitam o lançamento e a disponibilização do
+Comunidade.UnB para o público da Universidade de Brasília, em 2014.
