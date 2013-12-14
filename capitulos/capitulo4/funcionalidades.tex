@@ -109,7 +109,7 @@ queiram utilizar a rede.
 
 \textbf{Como} um aluno da Universidade Brasília
 
-\textbf{Eu quero} me autenticar na rede através da minha matricula e senha
+\textbf{Eu quero} me autenticar na rede através da minha matrícula e senha
 utilizada em outros sistemas.
 
 \subsubsection*{Cenários de uso:}
@@ -128,14 +128,14 @@ utilizada em outros sistemas.
 
 \textbf{Quando} eu acessar o portal
 
-\textbf{E} preencher os campos matricula e senha com a matrícula e a senha
+\textbf{E} preencher os campos matrícula e senha com a matrícula e a senha
 fornecidas a mim pela universidade
 
 \textbf{Então} deverei ser direcionado para uma página com o título
 "Primeiro Acesso"
 
-\textbf{E} deverei ver os campos "nome de usuário", "nome completo" e
-"e-mail pessoal" em branco.
+\textbf{E} deverei ver os campos ``nome de usuário'', ``nome completo'' e
+``e-mail pessoal'' em branco.
 
 %---------------------------------cenário-------------------------------------%
 \item \underline{Registro}
@@ -144,17 +144,20 @@ fornecidas a mim pela universidade
 
 \textbf{E} me encontro na página de primeiro acesso do Comunidade.UnB
 
-\textbf{Quando} eu preencher os campos "nome de usuário",
-"nome completo" e "e-mail pessoal" com "daniel.bucher", "Daniel Costa Bucher" e
-"daniel.bucher88@gmail.com"
+\textbf{Quando} eu preencher os campos
+``nome de usuário'',\\
+``nome completo''\\
+e ``e-mail pessoal'' com ``daniel.bucher'',\\
+``Daniel Costa Bucher'' e\\
+``daniel.bucher88@gmail.com''
 
-\textbf{E} clicar no botão "Registrar"
+\textbf{E} clicar no botão ``Registrar''
 
 \textbf{Então} eu devo ser direcionado para meu perfil
 
-\textbf{E} devo ver a url "<domínio>/daniel.bucher"
+\textbf{E} devo ver a url ``<domínio>/daniel.bucher''
 
-\textbf{E} devo ver "Daniel Costa Bucher" abaixo da imagem padrão de perfis
+\textbf{E} devo ver ``Daniel Costa Bucher'' abaixo da imagem padrão de perfis
 do Noosfero.
 
 %---------------------------------cenário-------------------------------------%
@@ -165,7 +168,7 @@ do Noosfero.
 
 \textbf{E} já utilizei o serviço do Comunidade.UnB
 
-\textbf{Quando} eu entrar com minha matricula e senha fornecida pela universidade
+\textbf{Quando} eu entrar com minha matrícula e senha fornecida pela universidade
 nos campos adequados para autenticação
 
 \textbf{E} clicar em entrar
@@ -230,30 +233,30 @@ parte junto à lista de minhas organizações.
 \begin{enumerate}
 
 %---------------------------------cenário-------------------------------------%
-\item \underline{Ver comunidade `mãe' na página `Gerenciar meus grupos'}
+\item \underline{Ver comunidade ``mãe'' na página ``Gerenciar meus grupos''}
 
-\textbf{Dado} que eu estou logado com a usuário `ze'
+\textbf{Dado} que eu estou logado com a usuário ``ze''
 
-\textbf{E} `ze' não é membro do Comunidade.UnB
+\textbf{E} ``ze'' não é membro do Comunidade.UnB
 
-\textbf{E} `ze' é membro da sub-comunidade de Unb, FGA
+\textbf{E} ``ze'' é membro da sub-comunidade de Unb, FGA
 
-\textbf{Quando} eu navegar até a página `Gerenciar meus grupos'
+\textbf{Quando} eu navegar até a página ``Gerenciar meus grupos''
 (/myprofile/ze/memberships)
 
 \textbf{Então} eu tenho que ver o Comunidade.UnB listada junto às
 demais comunidades que faço parte.
 
 %---------------------------------cenário-------------------------------------%
-\item \underline{Ver comunidade `mãe' na página `Comunidades de ze'}
+\item \underline{Ver comunidade ``mãe'' na página ``Comunidades de ze''}
 
-\textbf{Dado} que eu estou logado com a usuário `ze'
+\textbf{Dado} que eu estou logado com a usuário ``ze''
 
-\textbf{E} `ze' não é membro do Comunidade.UnB
+\textbf{E} ``ze'' não é membro do Comunidade.UnB
 
-\textbf{E} `ze' é membro da sub-comunidade de Unb, FGA
+\textbf{E} ``ze'' é membro da sub-comunidade de Unb, FGA
 
-\textbf{Quando} eu navegar até a página `Comunidades de ze'
+\textbf{Quando} eu navegar até a página ``Comunidades de ze''
 (/profile/ze/communities)
 
 \textbf{Então} eu tenho que ver o Comunidade.UnB listada junto às
@@ -265,7 +268,7 @@ demais comunidades que faço parte.
 %--------------------------------história-------------------------------------%
 \item \underline{Bloco de organizações relacionadas}
 
-Esta história de usuário está mapeada no ActionItem de número 2499\footnote{\url
+Esta história de usuário está mapeada no \textit{issue} de número 2499\footnote{\url
 {https://noosfero.org/Development/ActionItem2499}}.
 
 \textbf{Para} ter acesso às organizações relacionadas a uma organização
@@ -289,14 +292,14 @@ relacionadas à organização atual.
 
 \textbf{Quando} eu navegar até o painel de controle da comunidade X
 
-\textbf{E} eu clicar em "Editar blocos laterais"
+\textbf{E} eu clicar em ``Editar blocos laterais''
 
-\textbf{E} eu clicar em "Adicionar bloco"
+\textbf{E} eu clicar em ``Adicionar bloco''
 
-\textbf{Então} eu tenho que ver a opção 'Organizações Relacionadas'.
+\textbf{Então} eu tenho que ver a opção ``Organizações Relacionadas''.
 
 %---------------------------------cenário-------------------------------------%
-\item \underline{Listar todas as sub-organizações na organização `mãe'}
+\item \underline{Listar todas as sub-organizações na organização ``mãe''}
 
 \textbf{Dado} que eu estou logado com meu usuário
 
@@ -310,7 +313,7 @@ relacionadas à organização atual.
 
 \textbf{Quando} eu navegar até a página da comunidade X
 
-\textbf{Então} eu tenho que ver um bloco com o título 'Sub organizações'.
+\textbf{Então} eu tenho que ver um bloco com o título ``Sub organizações''.
 
 \textbf{E} eu tenho que ver um \textit{link} para a sub-comunidade Y neste
 bloco
@@ -335,7 +338,7 @@ bloco.
 
 \textbf{Quando} eu navegar até a página da comunidade X
 
-\textbf{Então} eu tenho que ver um bloco com o título 'Sub comunidades'.
+\textbf{Então} eu tenho que ver um bloco com o título ``Sub-comunidades''.
 
 \textbf{E} eu tenho que ver um \textit{link} para a sub-comunidade Y neste
 bloco
@@ -358,7 +361,7 @@ neste bloco.
 
 \textbf{Quando} eu navegar até a página da comunidade X
 
-\textbf{E} eu clicar no link "Ver todos" do bloco de organizações relacionadas
+\textbf{E} eu clicar no link ``Ver todos'' do bloco de organizações relacionadas
 
 \textbf{Então} eu tenho que ver uma página de sub-organizações
 
@@ -385,7 +388,7 @@ neste bloco.
 
 \textbf{Quando} eu navegar até a página da comunidade X
 
-\textbf{E} eu clicar no link "Ver todos" do bloco de organizações relacionadas
+\textbf{E} eu clicar no link ``Ver todos'' do bloco de organizações relacionadas
 
 \textbf{Então} eu tenho que ver uma página de sub-organizações
 
@@ -396,21 +399,21 @@ bloco
 neste bloco.
 
 %---------------------------------cenário-------------------------------------%
-\item \underline{Listar todas as organizações `mãe' de uma organização}
+\item \underline{Listar todas as organizações ``mãe'' de uma organização}
 
 \textbf{Dado} que eu estou logado com meu usuário
 
 \textbf{E} meu usuário é membro da comunidade X
 
-\textbf{E} e a comunidade Y é `mãe' de X
+\textbf{E} e a comunidade Y é ``mãe'' de X
 
-\textbf{E} e o empreendimento é `pai' de X
+\textbf{E} e o empreendimento é ``pai'' de X
 
 \textbf{E} a comunidade X possua um bloco de organizações relacionadas
 
 \textbf{Quando} eu navegar até a página da comunidade X
 
-\textbf{Então} eu tenho que ver um bloco com o título 'Organizações pais'.
+\textbf{Então} eu tenho que ver um bloco com o título ``Organizações pais''.
 
 \textbf{E} eu tenho que ver um \textit{link} para a sub-comunidade Y neste
 bloco
@@ -480,7 +483,7 @@ funcionalidade:
 \subsection{\textit{Plugin} de bloco de video}
 
 Esta funcionalidade foi desenvolvido pela equipe do Portal
-da FGA e está mapeada no ActionItem de número 2823\footnote{\url{https://
+da FGA e está mapeada no \textit{issue} de número 2823\footnote{\url{https://
 noosfero.org/Development/ActionItem2823}} e consiste em um \textit{plugin}
 que adicionar um novo tipo de bloco no Noosfero, o VideoBlock.
 
@@ -509,17 +512,17 @@ vimeo.com}}.
 %---------------------------------cenário-------------------------------------%
 \item \underline{Adicionar bloco}
 
-\textbf{Dado} que estou logado como o usuário `Zé'
+\textbf{Dado} que estou logado como o usuário ``Zé''
 
 \textbf{E} o \textit{plugin} Video esteja atualizado
 
-\textbf{Quando} eu navegar até a página "Editar blocos laterais" do meu perfil
+\textbf{Quando} eu navegar até a página ``Editar blocos laterais'' do meu perfil
 
-\textbf{E} clicar em "Adicionar bloco"
+\textbf{E} clicar em ``Adicionar bloco''
 
-\textbf{E} selecionar "Bloco de vídeo"
+\textbf{E} selecionar ``Bloco de vídeo''
 
-\textbf{E} clicar em "Adicionar"
+\textbf{E} clicar em ``Adicionar''
 
 \textbf{Então} eu devo ver um bloco de vídeo sem conteúdo na área principal.
 
@@ -527,46 +530,46 @@ vimeo.com}}.
 %---------------------------------cenário-------------------------------------%
 \item \underline{Adicionar vídeo do Youtube}
 
-\textbf{Dado} que estou logado como o usuário `Zé'
+\textbf{Dado} que estou logado como o usuário ``Zé''
 
 \textbf{E} possui um bloco de vídeo no meu perfil
 
-\textbf{Quando} eu navegar até a página de "Editar blocos laterais" do meu perfil
+\textbf{Quando} eu navegar até a página de ``Editar blocos laterais'' do meu perfil
 
-\textbf{E} clicar em "Editar" no bloco de vídeo
+\textbf{E} clicar em ``Editar'' no bloco de vídeo
 
 \textbf{E} adicionar a URL de um video do Youtube
 
-\textbf{E} preencher os campos "Largura" e "Altura" com 536 e 360
+\textbf{E} preencher os campos ``Largura'' e ``Altura'' com 536 e 360
 respectivamente
 
-\textbf{E} clicar em "Salvar"
+\textbf{E} clicar em ``Salvar''
 
 \textbf{Então} eu devo ver o vídeo incorporado na área principal do meu
-perfil na resolução "536x360".
+perfil na resolução ``536x360''.
 
 
 %---------------------------------cenário-------------------------------------%
 
 \item \underline{Adicionar vídeo do Vimeo}
 
-\textbf{Dado} que estou logado como o usuário `Zé'
+\textbf{Dado} que estou logado como o usuário ``Zé''
 
 \textbf{E} possui um bloco de vídeo no meu perfil
 
-\textbf{Quando} eu navegar até a página de "Editar blocos laterais" do meu perfil
+\textbf{Quando} eu navegar até a página de ``Editar blocos laterais'' do meu perfil
 
-\textbf{E} clicar em "Editar" no bloco de vídeo
+\textbf{E} clicar em ``Editar'' no bloco de vídeo
 
 \textbf{E} adicionar a URL de um video do Vimeo
 
-\textbf{E} preencher os campos "Largura" e "Altura" com 536 e 360
+\textbf{E} preencher os campos ``Largura'' e ``Altura'' com 536 e 360
 respectivamente
 
-\textbf{E} clicar em "Salvar"
+\textbf{E} clicar em ``Salvar''
 
 \textbf{Então} eu devo ver o vídeo incorporado na área principal do meu
-perfil na resolução "536x360".
+perfil na resolução ``536x360''.
 
 %cenários
 \end{enumerate}
@@ -588,6 +591,9 @@ funcionalidade:
 
 %desenvolvedores
 \end{enumerate}
+
+
+\begin{comment}
  
 %TODO revisar funcionalidade
 %------------------------------funcionalidade---------------------------------%
@@ -595,7 +601,8 @@ funcionalidade:
 
 %TODO Dividir em mais de uma user story
 
-Implementar melhorias no Bloco ``Links'', para que fique muito mais intuitivo para um usuário personalizar o seu menu lateral. Incluindo;
+Implementar melhorias no Bloco ``Links'', para que fique muito mais intuitivo
+para um usuário personalizar o seu menu lateral. Incluindo;
 - Mover itens por meio de ``Drag and Drop''
 - Interface fácil de incluir links para conteúdo próprio.
 
@@ -606,6 +613,7 @@ Implementar melhorias no bloco ``links'' para aumentar a usabilidade:
 \subsubsection*{Histórias de usuário}
 
 \begin{enumerate}
+
 
 %--------------------------------história-------------------------------------%
 \item \underline{Mover itens por \textit{Drag and Drop}}
@@ -627,15 +635,15 @@ Implementar melhorias no bloco ``links'' para aumentar a usabilidade:
 
 \textbf{E} eu clico no botão de edição do bloco padrão de links
 
-\textbf{E} eu veja 'Perfil' em cima de 'Galeria de imagens'
+\textbf{E} eu veja ``Perfil'' em cima de ``Galeria de imagens''
 
-\textbf{Quando} arrastar 'Galeria de imagens' para cima de 'Perfil'
+\textbf{Quando} arrastar ``Galeria de imagens'' para cima de ``Perfil''
 
-\textbf{E} clicar no botão 'Salvar'
+\textbf{E} clicar no botão ``Salvar''
 
 \textbf{E} eu for para a página do meu perfil
 
-\textbf{Então} eu tenho que ver 'Galeria de imagens' em cima de 'Perfil'
+\textbf{Então} eu tenho que ver ``Galeria de imagens'' em cima de ``Perfil''
 no bloco de links padrão do perfil.
 
 \end{enumerate}
@@ -646,5 +654,5 @@ no bloco de links padrão do perfil.
 
 \end{enumerate}
 
-
+\end{comment}
 
