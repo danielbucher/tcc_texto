@@ -36,8 +36,8 @@ Software livre é aquele que permite aos usuários usá-lo, estudá-lo, modific�
 redistribui-lo, em geral, sem restrições para tal e prevenindo que não sejam
 impostas restrições aos futuros usuários. 
 %
-Mais precisamente, o software livre garante quatro direitos a seus usuários
-~\footnote{Extraído de \url{http://www.gnu.org/} em Dezembro de 2013}:
+Mais precisamente, o software livre garante quatro direitos a seus usuários%
+\footnote{Extraído de \url{http://www.gnu.org/} em Dezembro de 2013}:
 
 \begin{itemize}
   \item A liberdade de utilizar o software, para qualquer propósito;
@@ -53,9 +53,9 @@ geralmente em um repositório na Internet, onde desenvolvedores e usuários
 podem interagir.
 %
 O código é necessariamente licenciado sob termos legais formais que estão de
-acordo com as definições da \textit{Free Software Foundation}
+acordo com as definições da \textit{Free Software Foundation}%
 \footnote{\url{http://www.gnu.org/philosophy/free-sw.html}} ou da
-\textit{Open Source Initiative}
+\textit{Open Source Initiative}%
 \footnote{\url{http://www.opensource.org/docs/definition.html}}.
 
 %------------------------------------------------------------------------------%
@@ -86,19 +86,20 @@ de \emph{bugs} identificados e mais sugestões de melhorias.
 \section{Noosfero, Uma Plataforma Livre para Redes Sociais}
 \label{noosfero-section}
 
-Noosfero~\footnote{\url{http://www.noosfero.org}}
+Noosfero\footnote{\url{http://www.noosfero.org}}
 é uma  plataforma web livre para criação de redes sociais, desenvolvida
-pela Cooperativa de Tecnologias Livres - Colivre
-~\footnote{\url{http://www.colivre.coop.br}},
+pela Cooperativa de Tecnologias Livres - Colivre%
+\footnote{\url{http://www.colivre.coop.br}},
 em 2007, sob licença AGPL v.3, com a proposta de permitir aos usuários criarem sua
 própria rede social personalizada, livre e autônoma.
 
 %------------------------------------------------------------------------------%
 
-O Noosfero foi desenvolvido na linguagem de programação Ruby
-~\footnote{\url{http://www.ruby-lang.org/en/}},
-versão 1.8.7, e utiliza o \textit{framework} Model-View-Controller (MVC) para aplicações web Ruby on Rails
-~\footnote{\url{http://rubyonrails.org/}}, versão 2.3.5.
+O Noosfero foi desenvolvido na linguagem de programação Ruby%
+\footnote{\url{http://www.ruby-lang.org/en/}},
+versão 1.8.7, e utiliza o \textit{framework} Model-View-Controller (MVC) para
+aplicações web Ruby on Rails%
+\footnote{\url{http://rubyonrails.org/}}, versão 2.3.5.
 %
 A escolha destas tecnologias, por parte dos criadores do Noosfero, que também
 trabalhamos juntos no contexto deste trabalho,
@@ -110,27 +111,34 @@ desenvolvedores externos~\cite{meirelles2013}.
 Outras características importantes que influenciaram essa escolha são a alta
 capacidade produtiva que o \textit{framework} possui por priorizar conceitos como
 \textit{convention over configuration} (convenção antes de configuração)
-e DRY~\footnote{Uma forma de apologia ao reuso de código}
+e DRY\footnote{Uma forma de apologia ao reuso de código}
 (\textit{Don't Repeat Yourself} - Não Repita a Si Mesmo), bem como, o alinhamento
 entre a comunidade do Ruby on Rails com metodologias ágeis de
 desenvolvimento de software, que são evidenciadas em uma série de ferramentas que
-viabilizam o uso de práticas como TDD~\footnote{Desenvolvimento orientado a testes}
-e BDD~\footnote{Design orientado a comportamento}, práticas adotadas no
+viabilizam o uso de práticas como TDD\footnote{Desenvolvimento orientado a testes}
+e BDD\footnote{Design orientado a comportamento}, práticas adotadas no
 desenvolvimento do Noosfero, e neste trabalho.
 
 %------------------------------------------------------------------------------%
 
 A segurança também foi uma preocupação na concepção do Noosfero, o que levou os
 desenvolvedores a tomar a decisão de homologar a ferramenta apenas para a
-versão do Debian~\footnote{\url{http://www.debian.org/}}
+versão do Debian\footnote{\url{http://www.debian.org/}}
 \textit{stable}, por este ser reconhecido por passar por rigorosos testes de
 segurança e correção de falhas antes de seu lançamento. 
 %
 Para manter a compatibilidade, as versões do Ruby e do Rails utilizadas no
-Noosfero são as versões disponibilizadas nos repositórios do Debian~\footnote{Por exemplo, a falha de segurança no Ruby on Rails descrita em \url{http://news.ycombinator.com/item?id=5035023}, não impactou o Noosfero, uma vez, diferente do Redmine, uma ferramenta de gestão de projeto amplamente utilizada, o primeiro não tem uma cópia do Ruby on Rails dentro do
-seu código-fonte, o que é uma prática ruim, por dificultar como lidar com problemas de segurança. O Noosfero utiliza o pacote do Ruby on Rails oficial do Debian, de forma que uma
-vez que a vulnerabilidade é corrigida no Debian, não é preciso corrigir no Noosfero. No caso do Redmine, a versão empacotada no Debian também utiliza essa abordagem, que
-faz parte da política técnica do Debian, ou seja, não embarcar cópias de bibliotecas, \textit{frameworks} etc.}.
+Noosfero são as versões disponibilizadas nos repositórios do Debian%
+\footnote{Por exemplo, a falha de segurança no Ruby on Rails descrita em
+\url{http://news.ycombinator.com/item?id=5035023}, não impactou o Noosfero, uma
+vez, diferente do Redmine, uma ferramenta de gestão de projeto amplamente
+utilizada, o primeiro não tem uma cópia do Ruby on Rails dentro do seu
+código-fonte, o que é uma prática ruim, por dificultar como lidar com problemas
+de segurança. O Noosfero utiliza o pacote do Ruby on Rails oficial do Debian,
+de forma que uma vez que a vulnerabilidade é corrigida no Debian, não é preciso
+corrigir no Noosfero. No caso do Redmine, a versão empacotada no Debian também
+utiliza essa abordagem, que faz parte da política técnica do Debian, ou seja,
+não embarcar cópias de bibliotecas, \textit{frameworks} etc.}.
 
 %------------------------------------------------------------------------------%
 
@@ -152,8 +160,8 @@ outros \textit{plugins}, além de manter o padrão de qualidade de código.
 
 Essa abordagem arquitetural é muito benéfica para a diversidade de contextos
 em que o Noosfero pode ser utilizado. Diversidade essa que pode ser evidenciada
-quando se observa a existência de uma rede como o Cirandas
-~\footnote{\url{https://cirandas.net/}},
+quando se observa a existência de uma rede como o Cirandas%
+\footnote{\url{https://cirandas.net/}},
 uma rede social com o propósito de promover economia solidária através
 da troca e venda de produtos e serviços, e o
 Stoa, um ambiente virtual para a disseminação de conhecimento em âmbito
@@ -256,7 +264,7 @@ e \textbf{empreendimentos} chamada de \textbf{organização} (em inglês,
 \end{figure}
 
 A Figura \ref{domain_profiles} apresenta a relação entre os tipos de perfil.
-A seta com a cabeça triangular representa uma relação de herança~\footnote{%
+A seta com a cabeça triangular representa uma relação de herança\footnote{%
 \url{http://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)}}
 entre as classes que representam as entidades de domínio.
 %
@@ -280,8 +288,8 @@ atendidas, em parte, neste trabalho com a implementação e/ou evolução de \te
 maioria dos casos de nossas colaborações.
 %
 Também, para avaliarmos a implantação do Noosfero na UnB, prototipamos um \textit{plugins} para autenticação
-na base de dados da UnB, de acordo, até o momento, com as autorizações cedidas pelos departamentos responsáveis
-~\footnote{As autorizações foram, gentilmente, solicitadas através do CDTC para os órgãos responsáveis por administrar
+na base de dados da UnB, de acordo, até o momento, com as autorizações cedidas pelos departamentos responsáveis%
+\footnote{As autorizações foram, gentilmente, solicitadas através do CDTC para os órgãos responsáveis por administrar
 as diversas bases de dados da UnB, como por exemplo o Decanato de Ensino de Graduação (DEG), responsável pela
 base de dados de alunos.} e interações com o Centro de Processamento de Dados (CPD) da instituição. Esses
 \textit{plugins} e as demais colaborações, atendendo os requisitos levantados e descritos, serão apresetados na Seção
