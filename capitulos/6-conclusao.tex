@@ -5,7 +5,7 @@ Ao longo deste trabalho de conclusão de curso, realizamos atividades que passam
 pelas principais áreas de conhecimento da Engenharia de Software, como a
 gerência de projetos, a gerência de configuração de software,
 o levantamento e a elaboração de requisitos, a análise e o \textit{design},
-a implementação, e aqui incluimos a criação de testes automatizados,
+a implementação, e aqui incluímos a criação de testes automatizados,
 a manutenção e a implantação de uma plataforma real de software livre, dentre
 outras.
 %
@@ -17,7 +17,7 @@ deste trabalho: \\
 , uma vez que, em nossa visão, esta é a principal missão de um Engenheiro de
 Software.
 %
-Outra atividade que julgamos ser de fundamental importancia para a continuidade
+Outra atividade que julgamos ser de fundamental importância para a continuidade
 deste trabalho, diz respeito ao repasse do conhecimento adquirido para uma
 equipe de alunos do curso de Engenharia de Software, que trabalhou inicialmente
 no Portal da FGA.
@@ -48,8 +48,8 @@ e 14 comunidades.
 \section{Trabalhos Futuros}
 
 Nessa seção, apresentamos um levantamento sobre alguns protocolos que
-podem ser usados para implementar a federação tecnologica para o Noosfero, e
-um propomos um estudo sobre escalabilidade, de forma a conseguir antender
+podem ser usados para implementar a federação tecnológica para o Noosfero, e
+um propomos um estudo sobre escalabilidade, de forma a conseguir atender
 um número de requisições concorrentes elevados e manter um bom nível de
 desempenho.
 
@@ -57,7 +57,7 @@ desempenho.
 
 A federação tecnológica é um assunto que tem sido constantemente discutido
 na comunidade do Noosfero. A transição do Noosfero para uma rede social federada
-é essencial para a criação de um ecosistema de redes de colaboração que
+é essencial para a criação de um ecossistema de redes de colaboração que
 comunicam entre si.
 %
 A federação consiste na habilidade de redes diferentes de conversarem entre si,
@@ -73,7 +73,7 @@ por Evan Prodomou para ser utilizado pelo \textbf{StatusNet}~\footnote{\url{%
 http://status.net/}}, um servidor  \textit{open-surce} para
 \textit{microblogging} escrito em PHP.
 %
-O OStatus foi construído com base no padrõe para criação de \textit{feeds},
+O OStatus foi construído com base no padrão para criação de \textit{feeds},
 \textbf{Atom}~\footnote{\url{http://www.atomenabled.org/}} e no
 protocolo \textbf{\textit{PubSubHubbub}}%
 ~\footnote{\url{https://code.google.com/p/pubsubhubbub/}}(\textbf{PuSH}).
@@ -99,7 +99,7 @@ No entanto, faz-se necessário realizar uma série de estudos e experimentos
 antes de tomar a decisão do protocolo a ser adotado, ou mesmo desenvolvido
 do início.
 
-Quando a federação tecnlogócia for uma realizadade no Noosfero, existirá a
+Quando a federação tecnológica for uma realidade no Noosfero, existirá a
 possibilidade de existir uma ``rede de redes'' de colaboração federadas,
 com vários universidades tendo sua própria rede de colaboração com sendo
 um nó.
@@ -111,7 +111,7 @@ fazendo uso desta tecnologia tende a se multiplicar.
 Desta forma, propomos que seja realizado um estudo sobre a possibilidade
 de aumentar a escalabilidade das redes, possivelmente havendo redundância
 de hospedeiros, tanto do Noosfero em si, quanto do Varnish, a camada
-responsável por atuar comoum servidor de \textit{proxy} reverso.
+responsável por atuar como um servidor de \textit{proxy} reverso.
 
 %-----------------------------------------------------------------------------%
 
@@ -185,7 +185,7 @@ não funcionais mencionados na Seção \ref{sec:non-functional-req}.} diz respei
 ao uso de uma camada de SSL e do protocolo HTTPS no Comunidade.UnB.
 %
 É importante, para manter a integridade das informações
-dos usuários, como suas senhas, que as requisiçẽs realizadas para o
+dos usuários, como suas senhas, que as requisições realizadas para o
 Comunidade.UnB passem uma uma camada de criptografia, conforme mencionado em
 \ref{sec:non-functional-req}.
 %
@@ -201,6 +201,9 @@ A história apresentada nesta sub-seção é descrita como uma história técnic
 invés de uma história de usuário, uma vez que o objetivo desta é atender a
 um requisito não-funcional do sistema.
 
+\begin{enumerate}
+
+
 %--------------------------------história-------------------------------------%
 \item \underline{Conexão criptografada}
 
@@ -213,6 +216,8 @@ Comunidade.UnB
 HTTPS.
 
 %-----------------------------------------------------------------------------%
+
+\end{enumerate}
 
 Existem várias outras funcionalidades e melhorias (por exemplo, melhorias de
 usabilidade e melhorias no fórum do Noosfero) que podem ser propostas para
