@@ -20,7 +20,7 @@ gerado nela.
 \section{Software Livre}
 
 Extraído da tese de doutorado de \citeonline{meirelles2013}, discutiremos os
-principais ponto relacionados ao o que é software livre do ponto de vista legal e
+principais pontos relacionados ao que é software livre do ponto de vista legal e
 das vantagens do desenvolvimento colaborativo.
 %
 Primeiramente, o que define e diferencia
@@ -48,7 +48,7 @@ Mais precisamente, o software livre garante quatro direitos a seus usuários%
 \end{itemize}
 
 Outro ponto é que esse software existe por meio de projetos de desenvolvimento
-que estão centradas em torno de algum código-fonte acessível ao público,
+que estão centrados em torno de algum código-fonte acessível ao público,
 geralmente em um repositório na Internet, onde desenvolvedores e usuários
 podem interagir.
 %
@@ -67,7 +67,7 @@ Esse compartilhamento pode simplificar o desenvolvimento de aplicações
 personalizadas, que não precisam ser programadas a partir do zero, mas
 podem basear-se em soluções já existentes.
 
-Outra vantagem resultante do compartilhamento do código se refere
+Outra vantagem resultante do compartilhamento do código refere-se
 à possível melhoria na qualidade, em particular frente aos
 problemas inerentes à sua complexidade \cite{CatedralBazzar}.
 %
@@ -144,7 +144,7 @@ não embarcar cópias de bibliotecas, \textit{frameworks} etc.}.
 
 A arquitetura do Noosfero foi pensada para permitir que este seja facilmente
 expansível, de forma que funcionalidades que não sejam comuns ao conceito de
-redes sociais sejam desenvolvidos como \textit{plugins}, assim diminuindo
+redes sociais sejam desenvolvidas como \textit{plugins}, assim diminuindo
 o acoplamento e aumentando a coesão dos diversos módulos do sistema.
 %
 Uma das grandes vantagens em se criar uma aplicação com arquitetura extensível
@@ -154,8 +154,8 @@ fonte do núcleo da ferramenta, além de permitir o isolamento de
 
 Os mantenedores do Noosfero, responsáveis por aprovar solicitações de
 alteração no código, exigem que os \textit{plugins} tenham um certo nível de
-testes para que esses possam ser incorporados à uma versão do Noosfero para
-evitar a inserção de \textit{bugs} que afetem o \textit{core} ou
+testes para que esses possam ser incorporados à uma versão do Noosfero, 
+evitando a inserção de \textit{bugs} que afetem o \textit{core} ou
 outros \textit{plugins}, além de manter o padrão de qualidade de código.
 
 Essa abordagem arquitetural é muito benéfica para a diversidade de contextos
@@ -233,7 +233,7 @@ do núcleo do Noosfero. Vale a pena ressaltarmos alguns componentes desta arquit
 
 O Noosfero é uma plataforma multi-ambiente, o que significa que se pode ter duas
 redes sociais distintas, com domínios, usuários e comunidades distintas em uma
-mesma instalação conforme ilustrado na Figura~\ref{domain_main}.
+mesma instalação, conforme ilustrado na Figura~\ref{domain_main}.
 %
 A entidade \textbf{\textit{Profile}}, em português \textbf{Perfil}, é uma
 abstração das três formas de entidades concretas de perfil existentes no
@@ -243,8 +243,8 @@ Noosfero: \textbf{pessoa}, \textbf{comunidade} e \textbf{empreendimento}
 %
 Em outras palavras, as três entidades possuem características em comum e são tratadas
 como uma só em determinados contextos dentro da aplicação. Existe ainda
-outra entidade que abstraí o comportamento comum à \textbf{comunidades}
-e \textbf{empreendimentos} chamada de \textbf{organização} (em inglês,
+outra entidade que abstraí o comportamento comum a \textbf{comunidades}
+e \textbf{empreendimentos}, chamada de \textbf{organização} (em inglês,
 \textbf{\textit{organization}}).
 
 \begin{figure}[h!]
@@ -287,10 +287,10 @@ essa plataforma ainda necessita de algumas melhorias e novas funcionalidades, qu
 atendidas, em parte, neste trabalho com a implementação e/ou evolução de \textit{plugins}, na
 maioria dos casos de nossas colaborações.
 %
-Também, para avaliarmos a implantação do Noosfero na UnB, prototipamos um \textit{plugins} para autenticação
+Também, para avaliarmos a implantação do Noosfero na UnB, prototipamos um \textit{plugin} para autenticação
 na base de dados da UnB, de acordo, até o momento, com as autorizações cedidas pelos departamentos responsáveis%
 \footnote{As autorizações foram, gentilmente, solicitadas através do CDTC para os órgãos responsáveis por administrar
 as diversas bases de dados da UnB, como por exemplo o Decanato de Ensino de Graduação (DEG), responsável pela
 base de dados de alunos.} e interações com o Centro de Processamento de Dados (CPD) da instituição. Esses
-\textit{plugins} e as demais colaborações, atendendo os requisitos levantados e descritos, serão apresetados na Seção
+\textit{plugins} e as demais colaborações, atendendo os requisitos levantados e descritos, serão apresentados na Seção
 ~\ref{funcionalidades}, do próximo capítulo.
